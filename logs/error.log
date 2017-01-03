@@ -1,0 +1,1328 @@
+2016-12-14 23:50:38 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::login() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /users/login
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-14 23:51:07 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\wamp64\www\gevetik2\src\Template\Users\login.ctp, line 6]
+Request URL: /gevetik2/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-12-14 23:51:07 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '<'
+Request URL: /gevetik2/users/login
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\g...', 6)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-12-15 00:27:52 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR) in [C:\wamp64\www\gevetik2\src\Controller\UsersController.php, line 114]
+Request URL: /gevetik2/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-12-15 00:27:53 Warning: Headers already sent in C:\wamp64\www\gevetik2\src\Controller\UsersController.php:114
+2016-12-15 00:27:53 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+Request URL: /gevetik2/users/login
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\g...', 114)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-12-15 00:28:44 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp64\www\gevetik2\src\Controller\UsersController.php, line 118]
+Request URL: /gevetik2/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-12-15 00:28:44 Warning: Headers already sent in C:\wamp64\www\gevetik2\src\Controller\UsersController.php:118
+2016-12-15 00:28:44 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /gevetik2/users/login
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\g...', 118)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-12-15 00:29:19 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp64\www\gevetik2\src\Controller\UsersController.php, line 118]
+Request URL: /gevetik2/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-12-15 00:29:20 Warning: Headers already sent in C:\wamp64\www\gevetik2\src\Controller\UsersController.php:118
+2016-12-15 00:29:20 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /gevetik2/users/login
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\g...', 118)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-12-15 00:29:37 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR) in [C:\wamp64\www\gevetik2\src\Controller\UsersController.php, line 125]
+Request URL: /gevetik2/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-12-15 00:29:37 Warning: Headers already sent in C:\wamp64\www\gevetik2\src\Controller\UsersController.php:125
+2016-12-15 00:29:37 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+Request URL: /gevetik2/users/login
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\g...', 125)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-12-15 00:30:23 Error: [Cake\Routing\Exception\MissingControllerException] Controller class User could not be found.
+Exception Attributes: array (
+  'class' => 'User',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /user
+Referer URL: http://localhost:8080/gevetik2/users/login
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-15 00:30:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class User could not be found.
+Exception Attributes: array (
+  'class' => 'User',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /user
+Referer URL: http://localhost:8080/gevetik2/users/login
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-15 22:28:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class PhpStorm0521ab611bca473dAcec41b561d84ddd.php could not be found.
+Exception Attributes: array (
+  'class' => 'PhpStorm0521ab611bca473dAcec41b561d84ddd.php',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /PhpStorm-0521ab61-1bca-473d-acec-41b561d84ddd.php
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(67): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 00:22:05 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 La table 'gevetik.evenements' n'existe pas
+Request URL: /evenement
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'evenements', Array, Object(Cake\Database\Schema\Table))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('evenements', Array)
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('evenements')
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Table.php(518): Cake\ORM\Table->schema()
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(391): Cake\ORM\Table->primaryKey()
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(368): Cake\ORM\Query->_addAssociationsToTypeMap(Object(App\Model\Table\EvenementTable), Object(Cake\Database\TypeMap), Array)
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(701): Cake\ORM\Query->contain(Array)
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Table.php(1937): Cake\ORM\Query->applyOptions(Array)
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Table.php(967): Cake\ORM\Table->callFinder('all', Object(Cake\ORM\Query), Array)
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(184): Cake\ORM\Table->find('all', Array)
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(713): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\EvenementTable), Array)
+#11 C:\wamp64\www\gevetik2\src\Controller\EvenementController.php(24): Cake\Controller\Controller->paginate(Object(App\Model\Table\EvenementTable))
+#12 [internal function]: App\Controller\EvenementController->index()
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#14 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#15 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\EvenementController))
+#16 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#19 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#20 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#21 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#22 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#23 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#24 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#25 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#26 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#27 {main}
+
+
+2016-12-19 00:22:12 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Evenements could not be found.
+Exception Attributes: array (
+  'class' => 'Evenements',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /evenements
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 00:22:54 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Evenements could not be found.
+Exception Attributes: array (
+  'class' => 'Evenements',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /evenements
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 00:23:14 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Evenements could not be found.
+Exception Attributes: array (
+  'class' => 'Evenements',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /evenements
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 00:23:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Evenements could not be found.
+Exception Attributes: array (
+  'class' => 'Evenements',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /evenements
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 00:24:10 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Evenements could not be found.
+Exception Attributes: array (
+  'class' => 'Evenements',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /evenements
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 00:24:44 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /evenements
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\src\Controller\EvenementsController.php(24): Cake\Controller\Controller->paginate(false)
+#1 [internal function]: App\Controller\EvenementsController->index()
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\EvenementsController))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#14 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#15 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#16 {main}
+
+
+2016-12-19 22:21:30 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Evenement could not be found.
+Exception Attributes: array (
+  'class' => 'Evenement',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /evenement
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 22:21:32 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /evenements
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\src\Controller\EvenementsController.php(24): Cake\Controller\Controller->paginate(false)
+#1 [internal function]: App\Controller\EvenementsController->index()
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\EvenementsController))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#14 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#15 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#16 {main}
+
+
+2016-12-19 22:21:36 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /evenements/index
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\src\Controller\EvenementsController.php(24): Cake\Controller\Controller->paginate(false)
+#1 [internal function]: App\Controller\EvenementsController->index()
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\EvenementsController))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#14 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#15 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#16 {main}
+
+
+2016-12-19 22:23:37 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Table/alias: 'Evenements' non unique
+Request URL: /evenements
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(172): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(958): Cake\Database\Query->execute()
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(906): Cake\ORM\Query->_all()
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(189): Cake\ORM\Query->all()
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(713): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\EvenementsTable), Array)
+#10 C:\wamp64\www\gevetik2\src\Controller\EvenementsController.php(24): Cake\Controller\Controller->paginate(Object(App\Model\Table\EvenementsTable))
+#11 [internal function]: App\Controller\EvenementsController->index()
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#14 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\EvenementsController))
+#15 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#17 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#18 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#19 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#20 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#21 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#23 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#24 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#25 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#26 {main}
+
+
+2016-12-19 22:24:41 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Table/alias: 'Evenements' non unique
+Request URL: /evenements
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(172): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(958): Cake\Database\Query->execute()
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(906): Cake\ORM\Query->_all()
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(189): Cake\ORM\Query->all()
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(713): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\EvenementsTable), Array)
+#10 C:\wamp64\www\gevetik2\src\Controller\EvenementsController.php(24): Cake\Controller\Controller->paginate(Object(App\Model\Table\EvenementsTable))
+#11 [internal function]: App\Controller\EvenementsController->index()
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#14 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\EvenementsController))
+#15 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#17 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#18 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#19 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#20 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#21 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#23 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#24 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#25 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#26 {main}
+
+
+2016-12-19 22:26:37 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Article could not be found.
+Exception Attributes: array (
+  'class' => 'Article',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /article
+Referer URL: http://localhost:8080/gevetik2/evenements
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 22:26:46 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Article could not be found.
+Exception Attributes: array (
+  'class' => 'Article',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /article/add
+Referer URL: http://localhost:8080/gevetik2/evenements
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 22:26:52 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Organisateur could not be found.
+Exception Attributes: array (
+  'class' => 'Organisateur',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /organisateur
+Referer URL: http://localhost:8080/gevetik2/evenements
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 22:26:56 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Reservation could not be found.
+Exception Attributes: array (
+  'class' => 'Reservation',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /reservation
+Referer URL: http://localhost:8080/gevetik2/evenements
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 22:27:53 Error: [Cake\Controller\Exception\MissingActionException] Action EvenementsController::1() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'EvenementsController',
+  'action' => '1',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /evenements/1
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\EvenementsController))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 22:56:14 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Article could not be found.
+Exception Attributes: array (
+  'class' => 'Article',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /article
+Referer URL: http://localhost:8080/gevetik2/evenements/index/1
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 22:56:37 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Table/alias: 'Articles' non unique
+Request URL: /articles
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(172): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(958): Cake\Database\Query->execute()
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(906): Cake\ORM\Query->_all()
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(189): Cake\ORM\Query->all()
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(713): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ArticlesTable), Array)
+#10 C:\wamp64\www\gevetik2\src\Controller\ArticlesController.php(24): Cake\Controller\Controller->paginate(Object(App\Model\Table\ArticlesTable))
+#11 [internal function]: App\Controller\ArticlesController->index()
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#14 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ArticlesController))
+#15 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#17 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#18 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#19 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#20 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#21 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#23 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#24 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#25 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#26 {main}
+
+
+2016-12-19 22:59:25 Error: [InvalidArgumentException] Articles is not associated with Articles
+Request URL: /articles
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(257): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\ArticlesTable), 'Articles', Array, Array)
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(382): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\ArticlesTable))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(353): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\ArticlesTable))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(985): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\ArticlesTable), true)
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(936): Cake\ORM\Query->_transformQuery()
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(136): Cake\ORM\Query->sql()
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(221): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(958): Cake\Database\Query->execute()
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(906): Cake\ORM\Query->_all()
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(189): Cake\ORM\Query->all()
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(713): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ArticlesTable), Array)
+#14 C:\wamp64\www\gevetik2\src\Controller\ArticlesController.php(24): Cake\Controller\Controller->paginate(Object(App\Model\Table\ArticlesTable))
+#15 [internal function]: App\Controller\ArticlesController->index()
+#16 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#17 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#18 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ArticlesController))
+#19 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#21 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#23 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#24 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#25 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#26 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#27 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#28 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#29 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2016-12-19 22:59:34 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Article could not be found.
+Exception Attributes: array (
+  'class' => 'Article',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /article
+Referer URL: http://localhost:8080/gevetik2/evenements/index/1
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 22:59:43 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Article could not be found.
+Exception Attributes: array (
+  'class' => 'Article',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /article
+Referer URL: http://localhost:8080/gevetik2/evenements/index/1
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 22:59:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Article could not be found.
+Exception Attributes: array (
+  'class' => 'Article',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /article/add
+Referer URL: http://localhost:8080/gevetik2/evenements/index/1
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 22:59:58 Error: [RuntimeException] Table "App\Model\Table\ArticlesTable" is not associated with "Articles"
+Request URL: /articles/add
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\src\Controller\ArticlesController.php(65): Cake\ORM\Table->__get('Articles')
+#1 [internal function]: App\Controller\ArticlesController->add()
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ArticlesController))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#14 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#15 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#16 {main}
+
+
+2016-12-19 23:18:24 Error: [InvalidArgumentException] Articles is not associated with Articles
+Request URL: /articles/
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(257): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\ArticlesTable), 'Articles', Array, Array)
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(382): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\ArticlesTable))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(353): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\ArticlesTable))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(985): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\ArticlesTable), true)
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(936): Cake\ORM\Query->_transformQuery()
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(136): Cake\ORM\Query->sql()
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(221): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(958): Cake\Database\Query->execute()
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(906): Cake\ORM\Query->_all()
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(189): Cake\ORM\Query->all()
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(713): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ArticlesTable), Array)
+#14 C:\wamp64\www\gevetik2\src\Controller\ArticlesController.php(24): Cake\Controller\Controller->paginate(Object(App\Model\Table\ArticlesTable))
+#15 [internal function]: App\Controller\ArticlesController->index()
+#16 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#17 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#18 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ArticlesController))
+#19 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#21 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#23 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#24 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#25 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#26 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#27 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#28 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#29 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2016-12-19 23:21:46 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Article could not be found.
+Exception Attributes: array (
+  'class' => 'Article',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /article
+Referer URL: http://localhost:8080/gevetik2/evenements/index/1
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 23:21:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Article could not be found.
+Exception Attributes: array (
+  'class' => 'Article',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /article
+Referer URL: http://localhost:8080/gevetik2/evenements/index/1
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-19 23:22:03 Error: [InvalidArgumentException] Articles is not associated with Articles
+Request URL: /articles
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(257): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\ArticlesTable), 'Articles', Array, Array)
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(382): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\ArticlesTable))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(353): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\ArticlesTable))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(985): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\ArticlesTable), true)
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(936): Cake\ORM\Query->_transformQuery()
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(136): Cake\ORM\Query->sql()
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(221): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(958): Cake\Database\Query->execute()
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(906): Cake\ORM\Query->_all()
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(189): Cake\ORM\Query->all()
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(713): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ArticlesTable), Array)
+#14 C:\wamp64\www\gevetik2\src\Controller\ArticlesController.php(24): Cake\Controller\Controller->paginate(Object(App\Model\Table\ArticlesTable))
+#15 [internal function]: App\Controller\ArticlesController->index()
+#16 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#17 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#18 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ArticlesController))
+#19 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#21 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#23 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#24 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#25 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#26 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#27 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#28 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#29 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2016-12-19 23:43:42 Error: [InvalidArgumentException] Articles is not associated with Articles
+Request URL: /articles
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(257): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\ArticlesTable), 'Articles', Array, Array)
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(382): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\ArticlesTable))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(353): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\ArticlesTable))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(985): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\ArticlesTable), true)
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(936): Cake\ORM\Query->_transformQuery()
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(136): Cake\ORM\Query->sql()
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(221): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(958): Cake\Database\Query->execute()
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(906): Cake\ORM\Query->_all()
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(189): Cake\ORM\Query->all()
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(713): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ArticlesTable), Array)
+#14 C:\wamp64\www\gevetik2\src\Controller\ArticlesController.php(24): Cake\Controller\Controller->paginate(Object(App\Model\Table\ArticlesTable))
+#15 [internal function]: App\Controller\ArticlesController->index()
+#16 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#17 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#18 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ArticlesController))
+#19 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#21 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#23 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#24 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#25 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#26 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#27 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#28 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#29 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2016-12-19 23:43:48 Error: [InvalidArgumentException] Articles is not associated with Articles
+Request URL: /articles
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(257): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\ArticlesTable), 'Articles', Array, Array)
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(382): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\ArticlesTable))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(353): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\ArticlesTable))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(985): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\ArticlesTable), true)
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(936): Cake\ORM\Query->_transformQuery()
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(136): Cake\ORM\Query->sql()
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(221): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(958): Cake\Database\Query->execute()
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(906): Cake\ORM\Query->_all()
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(189): Cake\ORM\Query->all()
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(713): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ArticlesTable), Array)
+#14 C:\wamp64\www\gevetik2\src\Controller\ArticlesController.php(24): Cake\Controller\Controller->paginate(Object(App\Model\Table\ArticlesTable))
+#15 [internal function]: App\Controller\ArticlesController->index()
+#16 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#17 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#18 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ArticlesController))
+#19 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#21 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#23 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#24 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#25 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#26 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#27 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#28 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#29 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2016-12-19 23:47:48 Error: [InvalidArgumentException] Articles is not associated with Articles
+Request URL: /articles
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(257): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\ArticlesTable), 'Articles', Array, Array)
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(382): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\ArticlesTable))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(353): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\ArticlesTable))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(985): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\ArticlesTable), true)
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(936): Cake\ORM\Query->_transformQuery()
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(136): Cake\ORM\Query->sql()
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(221): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(958): Cake\Database\Query->execute()
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(906): Cake\ORM\Query->_all()
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(189): Cake\ORM\Query->all()
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(713): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ArticlesTable), Array)
+#14 C:\wamp64\www\gevetik2\src\Controller\ArticlesController.php(24): Cake\Controller\Controller->paginate(Object(App\Model\Table\ArticlesTable))
+#15 [internal function]: App\Controller\ArticlesController->index()
+#16 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#17 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#18 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ArticlesController))
+#19 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#21 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#23 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#24 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#25 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#26 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#27 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#28 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#29 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2016-12-20 00:00:07 Error: [InvalidArgumentException] Articles is not associated with Articles
+Request URL: /articles
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(257): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\ArticlesTable), 'Articles', Array, Array)
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(382): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\ArticlesTable))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(353): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\ArticlesTable))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(985): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\ArticlesTable), true)
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(936): Cake\ORM\Query->_transformQuery()
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(136): Cake\ORM\Query->sql()
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(221): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(958): Cake\Database\Query->execute()
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(906): Cake\ORM\Query->_all()
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(189): Cake\ORM\Query->all()
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(713): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ArticlesTable), Array)
+#14 C:\wamp64\www\gevetik2\src\Controller\ArticlesController.php(24): Cake\Controller\Controller->paginate(Object(App\Model\Table\ArticlesTable))
+#15 [internal function]: App\Controller\ArticlesController->index()
+#16 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#17 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#18 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ArticlesController))
+#19 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#21 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#23 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#24 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#25 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#26 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#27 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#28 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#29 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2016-12-20 00:03:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Article could not be found.
+Exception Attributes: array (
+  'class' => 'Article',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /article
+Referer URL: http://localhost:8080/gevetik2/evenements
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-20 00:08:03 Error: [Cake\Controller\Exception\MissingActionException] Action ArticlesController::logout() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'ArticlesController',
+  'action' => 'logout',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /articles/logout?contoller=users
+Referer URL: http://localhost:8080/gevetik2/articles/add
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ArticlesController))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-12-22 00:01:44 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Table/alias: 'Participants' non unique
+Request URL: /participants
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(172): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(958): Cake\Database\Query->execute()
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(906): Cake\ORM\Query->_all()
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(189): Cake\ORM\Query->all()
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(713): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ParticipantsTable), Array)
+#10 C:\wamp64\www\gevetik2\src\Controller\ParticipantsController.php(24): Cake\Controller\Controller->paginate(Object(App\Model\Table\ParticipantsTable))
+#11 [internal function]: App\Controller\ParticipantsController->index()
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#14 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ParticipantsController))
+#15 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#17 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#18 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#19 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#20 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#21 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#23 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#24 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#25 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#26 {main}
+
+
+2016-12-22 00:02:52 Error: [InvalidArgumentException] Participants is not associated with Participants
+Request URL: /participants
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(257): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\ParticipantsTable), 'Participants', Array, Array)
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(382): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\ParticipantsTable))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(353): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\ParticipantsTable))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(985): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\ParticipantsTable), true)
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(936): Cake\ORM\Query->_transformQuery()
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(136): Cake\ORM\Query->sql()
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(221): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(958): Cake\Database\Query->execute()
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(906): Cake\ORM\Query->_all()
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(189): Cake\ORM\Query->all()
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(713): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ParticipantsTable), Array)
+#14 C:\wamp64\www\gevetik2\src\Controller\ParticipantsController.php(24): Cake\Controller\Controller->paginate(Object(App\Model\Table\ParticipantsTable))
+#15 [internal function]: App\Controller\ParticipantsController->index()
+#16 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#17 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#18 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ParticipantsController))
+#19 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#21 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#23 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#24 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#25 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#26 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#27 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#28 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#29 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2016-12-22 00:05:02 Error: [InvalidArgumentException] Participants is not associated with Participants
+Request URL: /participants
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(257): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\ParticipantsTable), 'Participants', Array, Array)
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(382): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\ParticipantsTable))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(353): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\ParticipantsTable))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(985): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\ParticipantsTable), true)
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(936): Cake\ORM\Query->_transformQuery()
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(136): Cake\ORM\Query->sql()
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(221): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(958): Cake\Database\Query->execute()
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\ORM\Query.php(906): Cake\ORM\Query->_all()
+#12 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(189): Cake\ORM\Query->all()
+#13 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(713): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ParticipantsTable), Array)
+#14 C:\wamp64\www\gevetik2\src\Controller\ParticipantsController.php(24): Cake\Controller\Controller->paginate(Object(App\Model\Table\ParticipantsTable))
+#15 [internal function]: App\Controller\ParticipantsController->index()
+#16 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#17 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#18 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ParticipantsController))
+#19 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#21 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#23 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#24 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#25 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#26 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#27 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#28 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#29 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2016-12-22 00:09:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Reservation could not be found.
+Exception Attributes: array (
+  'class' => 'Reservation',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /reservation
+Referer URL: http://localhost:8080/gevetik2/participants/add
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-01-03 14:05:16 Error: [Cake\Controller\Exception\MissingActionException] Action ArticlesController::logout() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'ArticlesController',
+  'action' => 'logout',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /articles/logout?contoller=users
+Referer URL: http://localhost:8080/gevetik2/articles/add
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ArticlesController))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-01-03 14:05:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class User could not be found.
+Exception Attributes: array (
+  'class' => 'User',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /user
+Stack Trace:
+#0 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetik2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetik2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+

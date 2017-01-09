@@ -17,40 +17,25 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+
                 <th scope="col"><?= $this->Paginator->sort('nom_evenement') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('slug_evenement') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('remise') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('date_remise') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('date_soumission_debut') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('date_soumission_fin') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('date_acceptation') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('date_acceptation_definitive') ?></th>
+
                 <th scope="col"><?= $this->Paginator->sort('date_debut') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('date_fin') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('evenement_active') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('nombre_page_accepte') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('prix_unitaire_extra_page') ?></th>
+
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($evenements as $evenement): ?>
             <tr>
-                <td><?= $this->Number->format($evenement->id) ?></td>
+
                 <td><?= h($evenement->nom_evenement) ?></td>
-                <td><?= h($evenement->slug_evenement) ?></td>
-                <td><?= $this->Number->format($evenement->remise) ?></td>
-                <td><?= h($evenement->date_remise) ?></td>
-                <td><?= h($evenement->date_soumission_debut) ?></td>
-                <td><?= h($evenement->date_soumission_fin) ?></td>
-                <td><?= h($evenement->date_acceptation) ?></td>
-                <td><?= h($evenement->date_acceptation_definitive) ?></td>
+
+
                 <td><?= h($evenement->date_debut) ?></td>
                 <td><?= h($evenement->date_fin) ?></td>
-                <td><?= $this->Number->format($evenement->evenement_active) ?></td>
-                <td><?= $this->Number->format($evenement->nombre_page_accepte) ?></td>
-                <td><?= $this->Number->format($evenement->prix_unitaire_extra_page) ?></td>
+
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $evenement->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $evenement->id]) ?>

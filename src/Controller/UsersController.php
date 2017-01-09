@@ -114,7 +114,10 @@ class UsersController extends AppController
             $user = $this->Auth->identify();
             if($user){
                 $this->Auth->setUser($user);
-                return $this->redirect(['controller'=>'users']);
+                if($user['role'] == 'admin'){
+                    return $this->redirect(['controller'=>'evenements']);
+                }
+                
             }
             //mauvais login
             $this->Flash->error('Login incorrecte !!');

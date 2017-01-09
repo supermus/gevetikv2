@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 03, 2017 at 03:21 PM
+-- Generation Time: Jan 09, 2017 at 09:37 PM
 -- Server version: 5.7.9
 -- PHP Version: 5.6.16
 
@@ -50,25 +50,25 @@ INSERT INTO `articles` (`id`, `evenement_id`, `titre`, `resume`, `nombre_page`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categorie`
+-- Table structure for table `categories`
 --
 
-DROP TABLE IF EXISTS `categorie`;
-CREATE TABLE IF NOT EXISTS `categorie` (
-  `categorie_id` int(10) NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE IF NOT EXISTS `categories` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `evenement_id` int(10) NOT NULL,
   `nom_categorie` varchar(50) NOT NULL,
   `slug_categorie` varchar(50) NOT NULL,
-  PRIMARY KEY (`categorie_id`),
+  PRIMARY KEY (`id`),
   UNIQUE KEY `unique` (`slug_categorie`,`evenement_id`),
   KEY `FK_evemement` (`evenement_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `categorie`
+-- Dumping data for table `categories`
 --
 
-INSERT INTO `categorie` (`categorie_id`, `evenement_id`, `nom_categorie`, `slug_categorie`) VALUES
+INSERT INTO `categories` (`id`, `evenement_id`, `nom_categorie`, `slug_categorie`) VALUES
 (1, 1, 'categorie1', 'categorie1');
 
 -- --------------------------------------------------------
@@ -158,12 +158,12 @@ CREATE TABLE IF NOT EXISTS `option_paiement` (
 
 DROP TABLE IF EXISTS `organisateurs`;
 CREATE TABLE IF NOT EXISTS `organisateurs` (
-  `organisateur_id` int(10) NOT NULL AUTO_INCREMENT,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `evenement_id` int(10) NOT NULL,
   `participant_id` int(10) NOT NULL,
   `nom_role` varchar(50) NOT NULL DEFAULT '',
   `est_organisateur` tinyint(4) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`organisateur_id`),
+  PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQUE` (`evenement_id`,`participant_id`),
   KEY `FK_participant_organisateur` (`participant_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -252,16 +252,16 @@ INSERT INTO `participants` (`id`, `prenom_participant`, `nom_participant`, `emai
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reservation`
+-- Table structure for table `reservations`
 --
 
-DROP TABLE IF EXISTS `reservation`;
-CREATE TABLE IF NOT EXISTS `reservation` (
-  `reservation_id` int(10) NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS `reservations`;
+CREATE TABLE IF NOT EXISTS `reservations` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `evenement_id` int(10) NOT NULL,
   `paiement_id` int(10) NOT NULL,
   `participant_id` int(10) NOT NULL,
-  PRIMARY KEY (`reservation_id`),
+  PRIMARY KEY (`id`),
   UNIQUE KEY `unique` (`evenement_id`,`participant_id`,`paiement_id`),
   KEY `FK_paiement_reservation` (`paiement_id`),
   KEY `FK_participant_reservation` (`participant_id`)
@@ -301,16 +301,16 @@ ALTER TABLE `articles`
   ADD CONSTRAINT `FK_evenement` FOREIGN KEY (`evenement_id`) REFERENCES `evenements` (`id`);
 
 --
--- Constraints for table `categorie`
+-- Constraints for table `categories`
 --
-ALTER TABLE `categorie`
+ALTER TABLE `categories`
   ADD CONSTRAINT `FK_evemement` FOREIGN KEY (`evenement_id`) REFERENCES `evenements` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `option`
 --
 ALTER TABLE `option`
-  ADD CONSTRAINT `FK_categorie` FOREIGN KEY (`categorie_id`) REFERENCES `categorie` (`categorie_id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `FK_categorie` FOREIGN KEY (`categorie_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `option_paiement`
@@ -334,9 +334,9 @@ ALTER TABLE `page_payee`
   ADD CONSTRAINT `FK_auteur_page_payee` FOREIGN KEY (`auteur_id`) REFERENCES `participants` (`id`);
 
 --
--- Constraints for table `reservation`
+-- Constraints for table `reservations`
 --
-ALTER TABLE `reservation`
+ALTER TABLE `reservations`
   ADD CONSTRAINT `FK_evenement_reservation` FOREIGN KEY (`evenement_id`) REFERENCES `evenements` (`id`),
   ADD CONSTRAINT `FK_paiement_reservation` FOREIGN KEY (`paiement_id`) REFERENCES `paiement` (`paiement_id`),
   ADD CONSTRAINT `FK_participant_reservation` FOREIGN KEY (`participant_id`) REFERENCES `participants` (`id`);

@@ -40,9 +40,17 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <h1><a href=""><?= $this->fetch('title') ?></a></h1>
             </li>
         </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><?= $this->Html->Link('LogOut',['contoller'=>'users','action'=>'logout']); ?></li>
+<div class="top-bar-section">
+            <ul class="left">
+                
+                <li><?= $this->Html->Link('Accueil',['contoller'=>'users','action'=>'logout']); ?></li>
+                <li><?= $this->Html->Link('Conférences',['contoller'=>'users','action'=>'logout']); ?></li>                 
+                <li><?= $this->Html->Link('Reservations',['contoller'=>'users','action'=>'logout']); ?></li>   
+                <li><?= $this->Html->Link('Contact',['contoller'=>'users','action'=>'logout']); ?></li>
+                <li><?= $this->Html->Link('Profil',['contoller'=>'users','action'=>'logout']); ?></li>
+            </ul>
+            <ul class="right"> 
+                <li><?= $this->Html->Link('Deconnecter',['contoller'=>'users','action'=>'logout']); ?></li>
             </ul>
         </div>
     </nav>

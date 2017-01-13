@@ -108,4 +108,8 @@ class EvenementsController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+    public function logout(){
+        $this->Flash->success('bien déconnecté');
+        return $this->redirect($this->Auth->logout());
+    }
 }

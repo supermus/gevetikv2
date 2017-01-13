@@ -48,6 +48,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </nav>
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
+    <?php if($this->request->session()->read('Auth.User.role')  == 'admin' ){
+    echo 'helo1';
+    } else
+    {echo 'helo2';}
+    ?>
+
         <?= $this->fetch('content') ?>
     </div>
     <footer>

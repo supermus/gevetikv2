@@ -5,6 +5,7 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Cake\Auth\DigestAuthenticate;
 
 /**
  * Users Model
@@ -76,7 +77,7 @@ class UsersTable extends Table
 
         $validator
             ->notEmpty('role');
-            
+
         $validator
             ->requirePresence('adresse', 'create')
             ->notEmpty('adresse');
@@ -98,4 +99,6 @@ class UsersTable extends Table
 
         return $rules;
     }
+
+
 }

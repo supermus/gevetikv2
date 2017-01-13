@@ -124,7 +124,10 @@ class UsersController extends AppController
                 if($user['role'] == 'admin'){
                     return $this->redirect(['controller'=>'evenements']);
                 }
-                
+                if($user['role'] == 'visiteur'){
+                    return $this->redirect(['controller'=>'pages']);
+                }
+                /// Ajouter les autres roles avec les bonnes redirections
             }
             //mauvais login
             $this->Flash->error('Login incorrecte !!');

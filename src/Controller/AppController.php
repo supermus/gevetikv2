@@ -27,7 +27,10 @@ use Cake\Event\Event;
  */
 class AppController extends Controller
 {
-
+    public function beforeFilter(Event $event)
+    {    //fonction qui permet d'accéder au différent page sans connexion
+        $this->Auth->allow(['inscription','login','logout']);
+    }
     /**
      * Initialization hook method.
      *

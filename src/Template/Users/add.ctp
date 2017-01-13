@@ -10,8 +10,13 @@
         <legend><?= __('Add User') ?></legend>
         <?php
             echo $this->Form->input('username');
+            echo $this->Form->input('email');
             echo $this->Form->input('password');
+            echo $this->Form->input('nom');
+            echo $this->Form->input('prenom');
+            echo $this->Form->input('datedenaissance');
             echo $this->Form->input('role');
+            echo $this->Form->input('adresse');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

@@ -15,8 +15,20 @@
             <td><?= h($user->username) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Email') ?></th>
+            <td><?= h($user->email) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Password') ?></th>
             <td><?= h($user->password) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Nom') ?></th>
+            <td><?= h($user->nom) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Prenom') ?></th>
+            <td><?= h($user->prenom) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Role') ?></th>
@@ -26,5 +38,13 @@
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($user->id) ?></td>
         </tr>
+        <tr>
+            <th scope="row"><?= __('Datedenaissance') ?></th>
+            <td><?= h($user->datedenaissance) ?></td>
+        </tr>
     </table>
+    <div class="row">
+        <h4><?= __('Adresse') ?></h4>
+        <?= $this->Text->autoParagraph(h($user->adresse)); ?>
+    </div>
 </div>

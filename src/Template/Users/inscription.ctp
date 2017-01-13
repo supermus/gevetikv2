@@ -15,7 +15,7 @@
             echo $this->Form->input('nom');
             echo $this->Form->input('prenom');
             echo $this->Form->input('datedenaissance');
-            //echo $this->Form->input('role');
+         //   echo $this->Form->input('role');
             echo $this->Form->input('adresse');
         ?>
     </fieldset>

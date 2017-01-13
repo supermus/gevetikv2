@@ -53,12 +53,33 @@ class UsersTable extends Table
             ->add('username', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
+            ->email('email')
+            ->requirePresence('email', 'create')
+            ->notEmpty('email');
+
+        $validator
             ->requirePresence('password', 'create')
             ->notEmpty('password');
 
         $validator
-            ->requirePresence('role', 'create')
+            ->requirePresence('nom', 'create')
+            ->notEmpty('nom');
+
+        $validator
+            ->requirePresence('prenom', 'create')
+            ->notEmpty('prenom');
+
+        $validator
+            ->date('datedenaissance')
+            ->requirePresence('datedenaissance', 'create')
+            ->notEmpty('datedenaissance');
+
+        $validator
             ->notEmpty('role');
+            
+        $validator
+            ->requirePresence('adresse', 'create')
+            ->notEmpty('adresse');
 
         return $validator;
     }
@@ -73,6 +94,7 @@ class UsersTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->isUnique(['username']));
+        $rules->add($rules->isUnique(['email']));
 
         return $rules;
     }

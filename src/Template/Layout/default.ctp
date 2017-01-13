@@ -49,9 +49,17 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <li><?= $this->Html->Link('Contact',['contoller'=>'users','action'=>'logout']); ?></li>
                 <li><?= $this->Html->Link('Profil',['contoller'=>'users','action'=>'logout']); ?></li>
             </ul>
+<<<<<<< HEAD
             <ul class="right"> 
                 <li><?= $this->Html->Link('S\'inscrire',['controller'=>'users\inscription']); ?></li>
+=======
+            <ul class="right">
+            <?php if ($loggedIn) : ?>
+>>>>>>> 5deca275743515afb210b39dfab92c3ae8c129b0
                 <li><?= $this->Html->Link('Deconnecter',['contoller'=>'users','action'=>'logout']); ?></li>
+                <?php else : ?>
+                <li><?= $this->Html->Link('Connecter',['contoller'=>'users','action'=>'login']); ?></li>
+                <?php endif; ?>
             </ul>
         </div>
     </nav>

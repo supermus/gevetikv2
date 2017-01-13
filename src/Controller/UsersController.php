@@ -138,7 +138,6 @@ class UsersController extends AppController
         public function inscription()
     {
         $user = $this->Users->newEntity();
-         //   $this->user['Users']['role'] = 'Name';
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->data);
             if ($this->Users->save($user)) {

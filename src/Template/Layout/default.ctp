@@ -43,13 +43,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <div class="top-bar-section">
             <ul class="left">
                 
-                <li><?= $this->Html->Link('Accueil',['contoller'=>'users','action'=>'logout']); ?></li>
-                <li><?= $this->Html->Link('Conférences',['contoller'=>'users','action'=>'logout']); ?></li>                 
+                <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
+                <li><?= $this->Html->Link('Conférences',['contoller'=>'evenements','action'=>'index']); ?></li>                 
                 <li><?= $this->Html->Link('Reservations',['contoller'=>'users','action'=>'logout']); ?></li>   
                 <li><?= $this->Html->Link('Contact',['contoller'=>'users','action'=>'logout']); ?></li>
                 <li><?= $this->Html->Link('Profil',['contoller'=>'users','action'=>'logout']); ?></li>
             </ul>
             <ul class="right"> 
+                <li><?= $this->Html->Link('S\'inscrire',['controller'=>'users\inscription']); ?></li>
                 <li><?= $this->Html->Link('Deconnecter',['contoller'=>'users','action'=>'logout']); ?></li>
             </ul>
         </div>

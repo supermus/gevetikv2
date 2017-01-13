@@ -42,12 +42,22 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </ul>
 <div class="top-bar-section">
             <ul class="left">
-                
-                <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
-                <li><?= $this->Html->Link('Conférences',['contoller'=>'evenements','action'=>'index']); ?></li>                 
-                <li><?= $this->Html->Link('Reservations',['contoller'=>'users','action'=>'logout']); ?></li>   
-                <li><?= $this->Html->Link('Contact',['contoller'=>'users','action'=>'logout']); ?></li>
-                <li><?= $this->Html->Link('Profil',['contoller'=>'users','action'=>'logout']); ?></li>
+                 <?php if($this->request->session()->read('Auth.User.role')  == 'admin' ) :?>
+                          <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
+                           <li><?= $this->Html->Link('Conférences',['contoller'=>'evenements','action'=>'index']); ?></li>
+                           <li><?= $this->Html->Link('Reservations',['contoller'=>'users','action'=>'logout']); ?></li>
+                           <li><?= $this->Html->Link('Contact',['contoller'=>'users','action'=>'logout']); ?></li>
+                           <li><?= $this->Html->Link('Profil',['contoller'=>'users','action'=>'logout']); ?></li>
+                  <?php elseif ($this->request->session()->read('Auth.User.role')  == 'visiteur' ) :?>
+                          <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
+                           <li><?= $this->Html->Link('Conférences',['contoller'=>'evenements','action'=>'index']); ?></li>
+                           <li><?= $this->Html->Link('Reservations',['contoller'=>'users','action'=>'logout']); ?></li>
+                           <li><?= $this->Html->Link('Contact',['contoller'=>'users','action'=>'logout']); ?></li>
+                           <li><?= $this->Html->Link('Profil',['contoller'=>'users','action'=>'logout']); ?></li>
+                  <?php else : ?>
+                      <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
+                      <li><?= $this->Html->Link('Conférences',['contoller'=>'evenements','action'=>'index']); ?></li>
+                  <?php endif;?>
             </ul>
             <ul class="right"> 
                 <li><?= $this->Html->Link('S\'inscrire',['controller'=>'users\inscription']); ?></li>
@@ -62,11 +72,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </nav>
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
-
-
         <?= $this->fetch('content') ?>
     </div>
     <footer>
     </footer>
 </body>
 </html>
+
+            <!--
+                -->

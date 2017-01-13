@@ -49,8 +49,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <li><?= $this->Html->Link('Contact',['contoller'=>'users','action'=>'logout']); ?></li>
                 <li><?= $this->Html->Link('Profil',['contoller'=>'users','action'=>'logout']); ?></li>
             </ul>
-            <ul class="right"> 
+            <ul class="right">
+            <?php if ($loggedIn) : ?>
                 <li><?= $this->Html->Link('Deconnecter',['contoller'=>'users','action'=>'logout']); ?></li>
+                <?php else : ?>
+                <li><?= $this->Html->Link('Connecter',['contoller'=>'users','action'=>'login']); ?></li>
+                <?php endif; ?>
             </ul>
         </div>
     </nav>

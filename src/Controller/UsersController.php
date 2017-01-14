@@ -3,7 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Event\Event;
-
+use Cake\Mailer\MailerAwareTrait;
 /**
  * Users Controller
  *
@@ -53,12 +53,17 @@ class UsersController extends AppController
      *
      * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
+    use MailerAwareTrait;
     public function add()
     {
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->data);
+            $user->password = 'test';
             if ($this->Users->save($user)) {
+                //MAil
+                $this->getMailer('User')->send('welcome',[$user]);
+                
                 $this->Flash->success(__('The user has been saved.'));
 
                 return $this->redirect(['action' => 'index']);

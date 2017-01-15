@@ -1,13 +1,27 @@
-<br>
-<div class="index large-4 medium-4 large offset-4 medium-offset-4 columns">
-	<div class="panel">
-		<h2 class="text-center"> Se connecter </h2>
-		<?= $this->Form->create(); ?>
-			<?= $this->Form->input('username'); ?>
-			<?= $this->Form->input('password', array('type'=>'password')); ?>
-		<div style="text-align:center">	<?= $this->Form->submit('Login', array('class'=>'button')); ?></div>
-		<?= $this->Form->end(); ?>
-       Vous n'avez pas de compte ?     
-        <?= $this->Html->Link('S\'inscrire >>',['controller'=>'users\inscription']); ?>
-	</div> 
+<div class="text-center" style="padding:50px 0">
+    <div class="logo">login</div>
+<div class="login-form-1">
+    <div class="login-form-main-message"></div>
+        <div class="main-login-form">
+            <div class="login-group">
+                <?= $this->Form->create(); ?>
+                    <div class="form-group">
+                <?= $this->Form->input('username', array('placeholder'=>'Nom d\'utilisateur','label'=>'')); ?>
+                    </div>
+                <div class="form-group">
+                    <?= $this->Form->input('password', array('type'=>'password','placeholder'=>'Mot de passe','label'=>'')); ?>
+                </div>
+            </div>
+       <?php       echo $this->Form->button('<i class="fa fa-chevron-right"></i>', array(
+    'type' => 'submit',
+    'class' => 'login-button',
+    'escape' => false
+));?>
+        </div>
+        <?= $this->Form->end(); ?>
+        <div class="etc-login-form">
+            <p>Nouveau utilisateur ? 
+            <?= $this->Html->Link('Créer un compte.',['controller'=>'users\inscription']); ?>
+        </div>
+</div>
 </div>

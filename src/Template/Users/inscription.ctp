@@ -1,24 +1,50 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
-    </ul>
-</nav>
-<div class="users form large-9 medium-8 columns content">
-    <?= $this->Form->create($user) ?>
-    <fieldset>
-        <legend><?= __('S\'inscrire') ?></legend>
-        <?php
-            echo $this->Form->input('username');
-            echo $this->Form->input('email');
-            echo $this->Form->input('password');
-            echo $this->Form->input('nom');
-            echo $this->Form->input('prenom');
-            echo $this->Form->input('datedenaissance');
-         //   echo $this->Form->input('role');
-            echo $this->Form->input('adresse');
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+<div class="text-center" style="padding:50px 0">
+	<div class="logo">Inscription</div>
+	<!-- Main Form -->
+	<div class="login-form-1">
+		<?= $this->Form->create($user) ?>
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<?= $this->Form->input('username', array('placeholder'=>'Nom d\'utilisateur','label'=>'')); ?>
+					</div>
+					<div class="form-group">
+						<?= $this->Form->input('password', array('placeholder'=>'Mot de passe','label'=>'')); ?>
+					</div>
+                    <br>
+					<div class="form-group">
+						<?= $this->Form->input('email', array('placeholder'=>'Adresse e-mail','label'=>'')); ?>
+					</div>
+					
+					<div class="form-group">
+						<?= $this->Form->input('nom', array('placeholder'=>'Nom','label'=>'')); ?>
+					</div>
+					<div class="form-group">
+						<?= $this->Form->input('prenom', array('placeholder'=>'prenom','label'=>'')); ?>
+					</div>
+					
+					<div class="form-group">
+                        <?= $this->Form->input('datedenaissance', array('label'=>'')); ?>
+					</div>
+                    
+					<div class="form-group">
+                        <?= $this->Form->input('adresse', array('placeholder'=>'Votre adresse','label'=>'')); ?>
+					</div>
+				</div>
+       <?php       echo $this->Form->button('<i class="fa fa-chevron-right"></i>', array(
+    'type' => 'submit',
+    'class' => 'login-button',
+    'escape' => false
+));?>
+                
+<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+                <?= $this->Form->end() ?>
+			</div>
+			<div class="etc-login-form">
+				<p>J'ai déjà un compte ? <?= $this->Html->Link('Se connecter ici.',['controller'=>'users\login']); ?></p>
+			</div>
+		</form>
+	</div>
+	<!-- end:Main Form -->
 </div>

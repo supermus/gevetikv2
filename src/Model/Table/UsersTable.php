@@ -76,6 +76,7 @@ class UsersTable extends Table
             ->notEmpty('datedenaissance');
 
         $validator
+            ->requirePresence('role', 'create')
             ->notEmpty('role');
 
         $validator

@@ -1,13 +1,19 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
+
+<br><br>
+<div class="col-md-2 sidebar">
+    <ul class="nav nav-sidebar">
+        <li><?= $this->Html->link(__('Liste utilisateurs'), ['action' => 'index']) ?></li>
     </ul>
-</nav>
-<div class="users form large-9 medium-8 columns content">
+
+</div>
+
+
+<div class="col-md-6 col-md-offset-1">
+    <div class="page-header">
+        <h2>Créer un utilisateur</h2>
+    </div>
     <?= $this->Form->create($user) ?>
     <fieldset>
-        <legend><?= __('Add User') ?></legend>
         <?php
             echo $this->Form->input('username');
             echo $this->Form->input('email');
@@ -15,10 +21,13 @@
             echo $this->Form->input('nom');
             echo $this->Form->input('prenom');
             echo $this->Form->input('datedenaissance');
-            echo $this->Form->input('role');
+            echo $this->Form->input('role',['options'=>['admin'=>'Administrateur',
+                'visiteur'=>'visiteur',
+                'finance'=>'Finance',
+                'organisateur'=>'Organisateur']]);
             echo $this->Form->input('adresse');
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Créer')) ?>
     <?= $this->Form->end() ?>
 </div>

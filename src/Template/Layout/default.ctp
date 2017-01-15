@@ -26,56 +26,69 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
+    <?= $this->Html->css('bootstrap.min') ?>
+    <!--   <?//= $this->Html->css('sidebar') ?> -->
+    <?= $this->Html->script(['bootstrap.min']) ?>
+    <!--<?= $this->Html->script(['sidebar']) ?>-->
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
+    <nav class ="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!--<ul class="title-area large-3 medium-4 columns">
             <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+                <h1><a href=""><?/*= $this->fetch('title') */?></a></h1>
             </li>
-        </ul>
-<div class="top-bar-section">
-            <ul class="left">
-                 <?php if($this->request->session()->read('Auth.User.role')  == 'admin' ) :?>
-                          <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
-                           <li><?= $this->Html->Link('Conférences',['contoller'=>'evenements','action'=>'index']); ?></li>
-                           <li><?= $this->Html->Link('Reservations',['contoller'=>'users','action'=>'logout']); ?></li>
-                           <li><?= $this->Html->Link('Contact',['contoller'=>'users','action'=>'logout']); ?></li>
-                           <li><?= $this->Html->Link('Profil',['contoller'=>'users','action'=>'logout']); ?></li>
-                  <?php elseif ($this->request->session()->read('Auth.User.role')  == 'visiteur' ) :?>
-                          <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
-                           <li><?= $this->Html->Link('Conférences',['contoller'=>'evenements','action'=>'index']); ?></li>
-                           <li><?= $this->Html->Link('Reservations',['contoller'=>'users','action'=>'logout']); ?></li>
-                           <li><?= $this->Html->Link('Contact',['contoller'=>'users','action'=>'logout']); ?></li>
-                           <li><?= $this->Html->Link('Profil',['contoller'=>'users','action'=>'logout']); ?></li>
-                  <?php else : ?>
-                      <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
-                      <li><?= $this->Html->Link('Conférences',['contoller'=>'evenements','action'=>'index']); ?></li>
-                  <?php endif;?>
-            </ul>
-            <ul class="right"> 
-                
-            <ul class="right">
-            <?php if ($loggedIn) : ?>
-                <li><?= $this->Html->Link('Deconnecter',['contoller'=>'users','action'=>'logout']); ?></li>
+        </ul>-->
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Gevetik</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <?php if($this->request->session()->read('Auth.User.role')  == 'admin' ) :?>
+                    <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
+                    <li><?= $this->Html->Link('Conférences',['contoller'=>'evenements','action'=>'index']); ?></li>
+                    <li><?= $this->Html->Link('Reservations',['contoller'=>'users','action'=>'logout']); ?></li>
+                    <li><?= $this->Html->Link('Contact',['contoller'=>'users','action'=>'logout']); ?></li>
+                    <li><?= $this->Html->Link('Profil',['contoller'=>'users','action'=>'logout']); ?></li>
+                <?php elseif ($this->request->session()->read('Auth.User.role')  == 'visiteur' ) :?>
+                    <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
+                    <li><?= $this->Html->Link('Conférences',['contoller'=>'evenements','action'=>'index']); ?></li>
+                    <li><?= $this->Html->Link('Reservations',['contoller'=>'users','action'=>'logout']); ?></li>
+                    <li><?= $this->Html->Link('Contact',['contoller'=>'users','action'=>'logout']); ?></li>
+                    <li><?= $this->Html->Link('Profil',['contoller'=>'users','action'=>'logout']); ?></li>
                 <?php else : ?>
-                <li><?= $this->Html->Link('S\'inscrire',['controller'=>'users\inscription']); ?></li>
-                <li><?= $this->Html->Link('Connecter',['contoller'=>'users','action'=>'login']); ?></li>
+                    <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
+                    <li><?= $this->Html->Link('Conférences',['contoller'=>'evenements','action'=>'index']); ?></li>
+                <?php endif;?>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <?php if ($loggedIn) : ?>
+                    <li><?= $this->Html->Link('Deconnecter',['contoller'=>'users','action'=>'logout']); ?></li>
+                <?php else : ?>
+                    <li><?= $this->Html->Link('S\'inscrire',['controller'=>'users\inscription']); ?></li>
+                    <li><?= $this->Html->Link('Connecter',['contoller'=>'users','action'=>'login']); ?></li>
                 <?php endif; ?>
             </ul>
         </div>
-    </nav>
-    <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-        <?= $this->fetch('content') ?>
     </div>
+    </nav>
+
+    <?= $this->Flash->render() ?>
+    <br><br>
+    <div class="container clearfix" style="width:100%;">
+      <div class="row">
+            <?= $this->fetch('content') ?>
+      </div>
+    </div>
+    <br>
     <footer>
+        <div class="text-center">
+        Copyright © 2017 Gevetik. All rights reserved.
+        </div>
     </footer>
 </body>
 </html>

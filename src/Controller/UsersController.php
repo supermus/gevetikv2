@@ -59,7 +59,6 @@ class UsersController extends AppController
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->data);
-            $user->password = 'test';
             if ($this->Users->save($user)) {
                 //MAil
                 $this->getMailer('User')->send('welcome',[$user]);

@@ -10,7 +10,6 @@ return [
      * true: Errors and warnings shown.
      */
     'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
-
     /**
      * Configure basic information about the application.
      *
@@ -55,7 +54,6 @@ return [
             'locales' => [APP . 'Locale' . DS],
         ],
     ],
-
     /**
      * Security and encryption configuration
      *
@@ -64,9 +62,8 @@ return [
      *   You should treat it as extremely sensitive data.
      */
     'Security' => [
-        'salt' => env('SECURITY_SALT', '__SALT__'),
+        'salt' => env('SECURITY_SALT', '54505c23bee880be59f3834a0ef4f374c53d98685eb7664210620cca10618177'),
     ],
-
     /**
      * Apply timestamps with the last modified time to static assets (js, css, images).
      * Will append a querystring parameter containing the time the file was modified.
@@ -78,7 +75,6 @@ return [
     'Asset' => [
         // 'timestamp' => true,
     ],
-
     /**
      * Configure the cache adapters.
      */
@@ -88,7 +84,6 @@ return [
             'path' => CACHE,
             'url' => env('CACHE_DEFAULT_URL', null),
         ],
-
         /**
          * Configure the cache used for general framework caching.
          * Translation cache files are stored with this configuration.
@@ -103,7 +98,6 @@ return [
             'duration' => '+2 minutes',
             'url' => env('CACHE_CAKECORE_URL', null),
         ],
-
         /**
          * Configure the cache for model and datasource caches. This cache
          * configuration is used to store schema descriptions, and table listings
@@ -119,7 +113,6 @@ return [
             'url' => env('CACHE_CAKEMODEL_URL', null),
         ],
     ],
-
     /**
      * Configure the Error and Exception handlers used by your application.
      *
@@ -156,7 +149,6 @@ return [
         'log' => true,
         'trace' => true,
     ],
-
     /**
      * Email configuration.
      *
@@ -189,8 +181,19 @@ return [
             'tls' => null,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
         ],
+        'gevetik' => [
+            'className' => 'Smtp',
+            // The following keys are used in SMTP transports
+            'host' => 'smtp.gmail.com',
+            'port' => 587,
+            'timeout' => 30,
+            'username' => 'supermus.elmadi@gmail.com',
+            'password' => 'xxxxx',
+            'client' => null,
+            'tls' => true,
+            'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
+        ],
     ],
-
     /**
      * Email delivery profiles
      *
@@ -207,8 +210,13 @@ return [
             //'charset' => 'utf-8',
             //'headerCharset' => 'utf-8',
         ],
+        'gevetik' => [
+            'transport' => 'gevetik',
+            'from' => ['supermus.elmadi@gmail.com'=>'Mus'],
+            //'charset' => 'utf-8',
+            //'headerCharset' => 'utf-8',
+        ]
     ],
-
     /**
      * Connection information used by the ORM to connect
      * to your application's datastores.
@@ -229,15 +237,14 @@ return [
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            'username' => 'my_app',
-            'password' => 'secret',
-            'database' => 'my_app',
+            'username' => 'root',
+            'password' => '',
+            'database' => 'gevetik',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'flags' => [],
             'cacheMetadata' => true,
             'log' => false,
-
             /**
              * Set identifier quoting to true if you are using reserved words or
              * special characters in your table or column names. Enabling this
@@ -247,7 +254,6 @@ return [
              * manipulated before being executed.
              */
             'quoteIdentifiers' => false,
-
             /**
              * During development, if using MySQL < 5.6, uncommenting the
              * following line could boost the speed at which schema metadata is
@@ -256,10 +262,8 @@ return [
              * which is the recommended value in production environments
              */
             //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
-
             'url' => env('DATABASE_URL', null),
         ],
-
         /**
          * The test connection is used during the test suite.
          */
@@ -281,7 +285,6 @@ return [
             'url' => env('DATABASE_TEST_URL', null),
         ],
     ],
-
     /**
      * Configures logging options
      */
@@ -301,7 +304,6 @@ return [
             'url' => env('LOG_ERROR_URL', null),
         ],
     ],
-
     /**
      * Session configuration.
      *

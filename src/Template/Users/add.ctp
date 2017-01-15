@@ -22,7 +22,7 @@
             echo $this->Form->input('prenom');
             echo $this->Form->input('datedenaissance');
             echo $this->Form->input('role',['options'=>['admin'=>'Administrateur',
-                'visiteur'=>'visiteur',
+                'visiteur'=>'Visiteur',
                 'finance'=>'Finance',
                 'organisateur'=>'Organisateur']]);
             echo $this->Form->input('adresse');

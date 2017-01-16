@@ -5135,3 +5135,136 @@ Stack Trace:
 #2 {main}
 
 
+2017-01-16 09:26:02 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\gevetikv2\src\Template\Layout\default.ctp, line 30]
+Request URL: /gevetikv2/users/login?contoller=users
+Referer URL: http://localhost/gevetikv2/users/inscription
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2017-01-16 09:26:02 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /gevetikv2/users/login?contoller=users
+Referer URL: http://localhost/gevetikv2/users/inscription
+Stack Trace:
+#0 C:\xampp\htdocs\gevetikv2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 30)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-01-16 09:26:02 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\gevetikv2\src\Template\Layout\default.ctp, line 30]
+Request URL: /gevetikv2/users/login?contoller=users
+Referer URL: http://localhost/gevetikv2/users/inscription
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2017-01-16 09:26:02 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /gevetikv2/users/login?contoller=users
+Referer URL: http://localhost/gevetikv2/users/inscription
+Stack Trace:
+#0 C:\xampp\htdocs\gevetikv2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 30)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-01-16 09:26:03 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\gevetikv2\src\Template\Layout\default.ctp, line 30]
+Request URL: /gevetikv2/users/login?contoller=users
+Referer URL: http://localhost/gevetikv2/users/inscription
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2017-01-16 09:26:03 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /gevetikv2/users/login?contoller=users
+Referer URL: http://localhost/gevetikv2/users/inscription
+Stack Trace:
+#0 C:\xampp\htdocs\gevetikv2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 30)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-01-16 09:26:04 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\gevetikv2\src\Template\Layout\default.ctp, line 30]
+Request URL: /gevetikv2/users/login?contoller=users
+Referer URL: http://localhost/gevetikv2/users/inscription
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2017-01-16 09:26:04 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /gevetikv2/users/login?contoller=users
+Referer URL: http://localhost/gevetikv2/users/inscription
+Stack Trace:
+#0 C:\xampp\htdocs\gevetikv2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 30)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-01-16 09:26:04 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\gevetikv2\src\Template\Layout\default.ctp, line 30]
+Request URL: /gevetikv2/users/login?contoller=users
+Referer URL: http://localhost/gevetikv2/users/inscription
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2017-01-16 09:26:04 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /gevetikv2/users/login?contoller=users
+Referer URL: http://localhost/gevetikv2/users/inscription
+Stack Trace:
+#0 C:\xampp\htdocs\gevetikv2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 30)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-01-16 09:26:13 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\gevetikv2\src\Template\Layout\default.ctp, line 31]
+Request URL: /gevetikv2/users/login?contoller=users
+Referer URL: http://localhost/gevetikv2/users/inscription
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2017-01-16 09:26:13 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /gevetikv2/users/login?contoller=users
+Referer URL: http://localhost/gevetikv2/users/inscription
+Stack Trace:
+#0 C:\xampp\htdocs\gevetikv2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 31)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-01-16 09:26:13 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\gevetikv2\src\Template\Layout\default.ctp, line 31]
+Request URL: /gevetikv2/users/login?contoller=users
+Referer URL: http://localhost/gevetikv2/users/inscription
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2017-01-16 09:26:13 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /gevetikv2/users/login?contoller=users
+Referer URL: http://localhost/gevetikv2/users/inscription
+Stack Trace:
+#0 C:\xampp\htdocs\gevetikv2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 31)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

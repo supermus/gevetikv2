@@ -138,7 +138,9 @@ class UsersController extends AppController
         }
     }
     public function logout(){
-        $this->Flash->success('bien déconnecté');
+        $this->Flash->set('Bien déconnecter.', [
+            'element' => 'success'
+        ]);
         return $this->redirect($this->Auth->logout());
     }
     //fonction inscription uniquement compte visiteur

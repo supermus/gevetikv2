@@ -1,27 +1,26 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?> </li>
+<br><br>
+<div class="col-md-2 sidebar">
+    <ul class="nav nav-sidebar">
+        <li><?= $this->Html->link(__('Modifier l\'utilisateur '), ['action' => 'edit', $user->id]) ?> </li>
+        <li><?= $this->Form->postLink(__('Supprimer l\'utilisateur'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </li>
+        <li><?= $this->Html->link(__('List des utilisateurs'), ['action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('Nouveau utilisateur'), ['action' => 'add']) ?> </li>
     </ul>
-</nav>
-<div class="users view large-9 medium-8 columns content">
-    <h3><?= h($user->id) ?></h3>
+</div>
+<div class="col-md-6 col-md-offset-1">
+    <div class="page-header">
+        <h2>détaille de <?= h($user->nom) ?></h2>
+    </div>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Username') ?></th>
+            <th scope="row"><?= __('Username' ) ?></th>
             <td><?= h($user->username) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Email') ?></th>
             <td><?= h($user->email) ?></td>
         </tr>
-        <tr>
-            <th scope="row"><?= __('Password') ?></th>
-            <td><?= h($user->password) ?></td>
-        </tr>
+
         <tr>
             <th scope="row"><?= __('Nom') ?></th>
             <td><?= h($user->nom) ?></td>
@@ -43,8 +42,5 @@
             <td><?= h($user->datedenaissance) ?></td>
         </tr>
     </table>
-    <div class="row">
-        <h4><?= __('Adresse') ?></h4>
-        <?= $this->Text->autoParagraph(h($user->adresse)); ?>
-    </div>
+
 </div>

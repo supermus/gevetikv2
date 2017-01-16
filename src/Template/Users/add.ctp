@@ -15,19 +15,19 @@
     <?= $this->Form->create($user) ?>
     <fieldset>
         <?php
-            echo $this->Form->input('username');
-            echo $this->Form->input('email');
+            echo $this->Form->input('username',['label'=>'Nom d\'utilisateur']);
+            echo $this->Form->input('email',['label'=>'Email']);
             //echo $this->Form->input('password');
-            echo $this->Form->input('nom');
-            echo $this->Form->input('prenom');
-            echo $this->Form->input('datedenaissance');
+            echo $this->Form->input('nom',['label'=>'Nom']);
+            echo $this->Form->input('prenom',['label'=>'Prenom']);
+            echo $this->Form->input('datedenaissance',['minYear'=>date('Y')-70, 'maxYear'=>date('Y'),'label'=>'Date de naissance']);
             echo $this->Form->input('role',['options'=>['admin'=>'Administrateur',
                 'visiteur'=>'Visiteur',
                 'finance'=>'Finance',
                 'organisateur'=>'Organisateur']]);
-            echo $this->Form->input('adresse');
+            echo $this->Form->input('adresse',['label'=>'Adresse']);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Créer')) ?>
+    <?= $this->Form->button(array('value'=>'Ajouter')) ?>
     <?= $this->Form->end() ?>
 </div>

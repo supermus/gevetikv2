@@ -1,30 +1,33 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+<br><br>
+<div class="col-md-2 sidebar">
+    <ul class="nav nav-sidebar">
+        
         <li><?= $this->Form->postLink(
-                __('Delete'),
+                __('Supprimer'),
                 ['action' => 'delete', $user->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]
+                ['confirm' => __('Vous voulez vraiement supprimer ? # {0}?', $user->id)]
             )
-        ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
+            ?></li>
+        <li><?= $this->Html->link(__('Liste des utilisateurs'), ['action' => 'index']) ?></li>
     </ul>
-</nav>
-<div class="users form large-9 medium-8 columns content">
+</div>
+<div class="col-md-6 col-md-offset-1">
+    <div class="page-header">
+        <h2>Modifier <?= h($user->nom) ?></h2>
+    </div>
     <?= $this->Form->create($user) ?>
     <fieldset>
-        <legend><?= __('Edit User') ?></legend>
         <?php
-            echo $this->Form->input('username');
-            echo $this->Form->input('email');
-            echo $this->Form->input('password');
-            echo $this->Form->input('nom');
-            echo $this->Form->input('prenom');
-            echo $this->Form->input('datedenaissance');
-            echo $this->Form->input('role');
-            echo $this->Form->input('adresse');
+            echo $this->Form->input('username',['label'=>'Nom d\'utilisateur']);
+            echo $this->Form->input('email',['label'=>'Email']);
+            echo $this->Form->input('password',['label'=>'Mot de passe']);
+            echo $this->Form->input('nom',['label'=>'Nom']);
+            echo $this->Form->input('prenom',['label'=>'Prenom']);
+            echo $this->Form->input('datedenaissance',['minYear'=>date('Y')-70, 'maxYear'=>date('Y'),'label'=>'Date de naissance']);
+            echo $this->Form->input('role',['label'=>'Role']);
+            echo $this->Form->input('adresse',['label'=>'Adresse']);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(array('value'=>'Enregistrer')) ?>
     <?= $this->Form->end() ?>
 </div>

@@ -25,16 +25,18 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
-    <?= $this->Html->css('font-awesome') ?>
-    <?= $this->Html->css('font-awesome.min') ?>
     <?= $this->Html->css('bootstrap.min') ?>
     <?= $this->Html->script(['bootstrap.min']) ?>
+    <?= $this->Html->css('font-awesome') ?>
+    <?= $this->Html->css('font-awesome.min') ?>
     <?= $this->Html->css('login') ?>
     <?= $this->Html->script(['login']) ?>
-
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
     <nav class ="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -43,11 +45,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <h1><a href=""><?/*= $this->fetch('title') */?></a></h1>
             </li>
         </ul>-->
-    <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">Gevetik</a>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <?php if($this->request->session()->read('Auth.User.role')  == 'admin' ) :?>
                     <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
@@ -86,12 +87,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
       </div>
     </div>
     <br>
-    <footer>
-        <div class="text-center">
-        Copyright © 2017 Gevetik. All rights reserved.
-        </div>
-    </footer>
 </body>
+<footer class="panel-footer">
+            <p>Gevetik © 2017, All Rights Reserved
+            </p>
+</footer>  
+    
 </html>
 
             <!--

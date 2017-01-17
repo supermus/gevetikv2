@@ -138,7 +138,7 @@ class UsersController extends AppController
         }
     }
     public function logout(){
-        $this->Flash->set('Bien déconnecter.', [
+        $this->Flash->set('Vous êtes bien déconnecter.', [
             'element' => 'success'
         ]);
         return $this->redirect($this->Auth->logout());
@@ -149,9 +149,9 @@ class UsersController extends AppController
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->data);
+            $user['role'] = 'visiteur';
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
-
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error(__('The user could not be saved. Please, try again.'));

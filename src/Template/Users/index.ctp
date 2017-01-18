@@ -4,10 +4,9 @@
         <li><?/*= $this->Html->link(__('New User'), ['action' => 'add']) */?></li>
     </ul>
 </nav>-->
-<br><br>
         <div class="col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?></li>
+                <li><?= $this->Html->link(__('Nouveau utilisateur'), ['action' => 'add']) ?></li>
             </ul>
 
         </div>
@@ -15,7 +14,7 @@
 
     <div class="col-md-10">
         <div class="page-header"></div>
-    <h3><?= __('Users') ?></h3>
+    <h3><?= __('Utilisateurs ') ?></h3>
         <div class="table-responsive" style="overflow: hidden">
     <table class="table table-striped table-hover ">
         <thead>
@@ -39,9 +38,9 @@
                 <td><?= h($user->datedenaissance) ?></td>
                 <td><?= h($user->role) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $user->id],['class'=>'btn btn-sm btn-info']) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id],['class'=>'btn btn-sm btn-primary'])?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => 'Voulez-vous vraiment supprimer ?','class'=>'btn btn-sm btn-danger']) ?>
+                    <?= $this->Html->link(__('détaille'), ['action' => 'view', $user->id],['class'=>'btn btn-sm btn-info']) ?>
+                    <?= $this->Html->link(__('Modifier'), ['action' => 'edit', $user->id],['class'=>'btn btn-sm btn-primary'])?>
+                    <?= $this->Form->postLink(__('Supprimer'), ['action' => 'delete', $user->id], ['confirm' => 'Voulez-vous vraiment supprimer ?','class'=>'btn btn-sm btn-danger']) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
@@ -50,9 +49,9 @@
         </div>
     <div class="paginator text-center">
         <ul class="pagination">
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->prev('< ' . __('précedent')) ?>
             <?= $this->Paginator->numbers(['before'=>'', 'after'=>'']) ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
+            <?= $this->Paginator->next(__('suivant') . ' >') ?>
         </ul>
         <p><?= $this->Paginator->counter() ?></p>
     </div>

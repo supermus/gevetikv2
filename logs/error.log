@@ -11414,3 +11414,995 @@ Stack Trace:
 #13 {main}
 
 
+2017-01-17 19:19:37 Error: Fatal Error (1): Trait 'BootstrapUI\View\UIViewTrait' not found in [C:\wamp64\www\gevetikv2\gevetikv2\src\View\AppView.php, line 21]
+Request URL: /gevetikv2/gevetikv2/
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2017-01-17 19:27:53 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(172): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(172): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(75): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\SqliteStatement->execute()
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(1670): Cake\Database\Query->execute()
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(1564): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(215): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Event\EventManager.php(426): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(101): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#16 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#19 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#20 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#21 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#22 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#23 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#24 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#25 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#26 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#27 {main}
+
+
+2017-01-17 19:28:24 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(172): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(172): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(75): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\SqliteStatement->execute()
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(1670): Cake\Database\Query->execute()
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(1564): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(215): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Event\EventManager.php(426): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(101): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#16 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#19 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#20 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#21 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#22 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#23 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#24 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#25 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#26 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#27 {main}
+
+
+2017-01-17 19:28:34 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(172): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(172): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(75): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\SqliteStatement->execute()
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(1670): Cake\Database\Query->execute()
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(1564): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(215): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Event\EventManager.php(426): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(101): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#16 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#19 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#20 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#21 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#22 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#23 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#24 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#25 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#26 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#27 {main}
+
+
+2017-01-17 19:31:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/base.css
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-01-17 19:31:12 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/cake.css
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-01-17 19:58:59 Error: Fatal Error (1): Class 'App\Controller\Email' not found in [C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php, line 155]
+Request URL: /gevetikv2/gevetikv2/users/inscription
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/inscription
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2017-01-17 19:58:59 Warning: Headers already sent in C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php:155
+2017-01-17 19:58:59 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\Email' not found
+Request URL: /gevetikv2/gevetikv2/users/inscription
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/inscription
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\wamp64\\www\\g...', 155)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-01-17 20:21:38 Error: [Cake\View\Exception\MissingTemplateException] Template file "Users\resetpw.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\resetpw.ctp',
+)
+Request URL: /users/resetpw
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/login
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\View\View.php(595): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(617): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(128): Cake\Controller\Controller->render()
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-01-17 20:21:54 Error: [Cake\View\Exception\MissingTemplateException] Template file "Users\resetpw.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\resetpw.ctp',
+)
+Request URL: /users/resetpw
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\View\View.php(595): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(617): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(128): Cake\Controller\Controller->render()
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-01-17 20:21:59 Error: [Cake\View\Exception\MissingTemplateException] Template file "Users\resetpw.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\resetpw.ctp',
+)
+Request URL: /users/resetpw
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\View\View.php(595): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(617): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(128): Cake\Controller\Controller->render()
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-01-17 20:27:06 Error: Fatal Error (1): Class 'App\Controller\TableRegistry' not found in [C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php, line 169]
+Request URL: /gevetikv2/gevetikv2/users/resetpw/?id=1
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/resetpw/?id=1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2017-01-17 20:27:06 Warning: Headers already sent in C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php:169
+2017-01-17 20:27:06 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\TableRegistry' not found
+Request URL: /gevetikv2/gevetikv2/users/resetpw/?id=1
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/resetpw/?id=1
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\wamp64\\www\\g...', 169)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-01-17 22:59:38 Error: [Cake\View\Exception\MissingTemplateException] Template file "Users\forgot_password.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\forgot_password.ctp',
+)
+Request URL: /users/forgotPassword
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\View\View.php(595): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(617): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(128): Cake\Controller\Controller->render()
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-01-17 23:00:01 Error: [Cake\View\Exception\MissingTemplateException] Template file "Users\forgot_password.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\forgot_password.ctp',
+)
+Request URL: /users/forgotPassword
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\View\View.php(595): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(617): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(128): Cake\Controller\Controller->render()
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-01-17 23:01:08 Error: [Cake\View\Exception\MissingTemplateException] Template file "Users\forgot_password.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\forgot_password.ctp',
+)
+Request URL: /users/forgotPassword
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\View\View.php(595): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(617): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(128): Cake\Controller\Controller->render()
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-01-18 00:00:37 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'password_reset_token' doesn't have a default value
+Request URL: /users/inscription
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/inscription
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(172): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(1670): Cake\Database\Query->execute()
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(1564): Cake\ORM\Table->_insert(Object(App\Model\Entity\User), Array)
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(App\Model\Entity\User), Object(ArrayObject))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php(153): Cake\ORM\Table->save(Object(App\Model\Entity\User))
+#11 [internal function]: App\Controller\UsersController->inscription()
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#14 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#15 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#17 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#18 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#19 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#20 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#21 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#23 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#24 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#25 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#26 {main}
+
+
+2017-01-18 00:06:29 Error: Fatal Error (1): Class 'App\Controller\Text' not found in [C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php, line 176]
+Request URL: /gevetikv2/gevetikv2/users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2017-01-18 00:06:30 Warning: Headers already sent in C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php:176
+2017-01-18 00:06:30 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\Text' not found
+Request URL: /gevetikv2/gevetikv2/users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\wamp64\\www\\g...', 176)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-01-18 00:08:45 Error: Fatal Error (1): Class 'App\Controller\Security' not found in [C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php, line 179]
+Request URL: /gevetikv2/gevetikv2/users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2017-01-18 00:08:45 Warning: Headers already sent in C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php:179
+2017-01-18 00:08:45 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\Security' not found
+Request URL: /gevetikv2/gevetikv2/users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\wamp64\\www\\g...', 179)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-01-18 00:10:08 Error: Fatal Error (1): Class 'App\Controller\Router' not found in [C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php, line 186]
+Request URL: /gevetikv2/gevetikv2/users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2017-01-18 00:10:08 Warning: Headers already sent in C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php:186
+2017-01-18 00:10:08 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\Router' not found
+Request URL: /gevetikv2/gevetikv2/users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\wamp64\\www\\g...', 186)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-01-18 00:11:03 Error: Fatal Error (1): Class 'Cake\Utility\Router' not found in [C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php, line 187]
+Request URL: /gevetikv2/gevetikv2/users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2017-01-18 00:11:04 Warning: Headers already sent in C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php:187
+2017-01-18 00:11:04 Error: [Cake\Error\FatalErrorException] Class 'Cake\Utility\Router' not found
+Request URL: /gevetikv2/gevetikv2/users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'Cake\\Uti...', 'C:\\wamp64\\www\\g...', 187)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-01-18 00:16:18 Error: [Cake\Mailer\Exception\MissingMailerException] Mailer class "SendEmail" could not be found.
+Exception Attributes: array (
+  'name' => 'SendEmail',
+)
+Request URL: /users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php(190): App\Controller\UsersController->getMailer('SendEmail')
+#1 [internal function]: App\Controller\UsersController->forgotPassword()
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#15 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#16 {main}
+
+
+2017-01-18 17:05:34 Error: [Cake\Mailer\Exception\MissingActionException] Mail SendEmailMailer::forgotPasswordEmail() could not be found, or is not accessible.
+Exception Attributes: array (
+  'mailer' => 'SendEmailMailer',
+  'action' => 'forgotPasswordEmail',
+)
+Request URL: /users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php(190): Cake\Mailer\Mailer->send('forgotPasswordE...', Array)
+#1 [internal function]: App\Controller\UsersController->forgotPassword()
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#15 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#16 {main}
+
+
+2017-01-18 17:08:46 Error: [BadMethodCallException] You need specify one destination on to, cc or bcc.
+Request URL: /users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Mailer\Mailer.php(250): Cake\Mailer\Email->send()
+#1 C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php(190): Cake\Mailer\Mailer->send('forgotPasswordE...', Array)
+#2 [internal function]: App\Controller\UsersController->forgotPassword()
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#15 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#16 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#17 {main}
+
+
+2017-01-18 17:08:46 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Debugger.php line=754 in [C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /gevetikv2/gevetikv2/users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 118
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2017-01-18 17:08:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Debugger.php:754) in [C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 146]
+Request URL: /gevetikv2/gevetikv2/users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 146
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 118
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2017-01-18 17:08:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Debugger.php:754) in [C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 173]
+Request URL: /gevetikv2/gevetikv2/users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 173
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 118
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2017-01-18 17:08:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Debugger.php:754) in [C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 173]
+Request URL: /gevetikv2/gevetikv2/users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 173
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 118
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2017-01-18 17:13:06 Error: [Cake\Network\Exception\SocketException] Could not send email: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+Request URL: /users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Mailer\Transport\MailTransport.php(54): Cake\Mailer\Transport\MailTransport->_mail('el-madi@live.fr', 'reset password', '\r\n', 'From: you@local...', NULL)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Mailer\Email.php(1344): Cake\Mailer\Transport\MailTransport->send(Object(Cake\Mailer\Email))
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Mailer\Mailer.php(250): Cake\Mailer\Email->send()
+#3 C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php(190): Cake\Mailer\Mailer->send('forgotPasswordE...', Array)
+#4 [internal function]: App\Controller\UsersController->forgotPassword()
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#15 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#17 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#18 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#19 {main}
+
+
+2017-01-18 17:24:42 Error: [InvalidArgumentException] Invalid email: ""
+Request URL: /users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Mailer\Email.php(607): Cake\Mailer\Email->_validateEmail('')
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Mailer\Email.php(466): Cake\Mailer\Email->_setEmail('_to', '', NULL)
+#2 [internal function]: Cake\Mailer\Email->to('')
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Mailer\Mailer.php(205): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\gevetikv2\gevetikv2\src\Mailer\SendEmailMailer.php(21): Cake\Mailer\Mailer->__call('to', Array)
+#5 C:\wamp64\www\gevetikv2\gevetikv2\src\Mailer\SendEmailMailer.php(21): App\Mailer\SendEmailMailer->to('')
+#6 [internal function]: App\Mailer\SendEmailMailer->forgotPasswordEmail(Array)
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Mailer\Mailer.php(248): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php(190): Cake\Mailer\Mailer->send('forgotPasswordE...', Array)
+#9 [internal function]: App\Controller\UsersController->forgotPassword()
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#15 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#16 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#17 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#18 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#19 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#20 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#21 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#23 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-01-18 17:31:08 Error: [Cake\View\Exception\MissingTemplateException] Template file "Email\text\gevetik_forgot_email_template.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Email\\text\\gevetik_forgot_email_template.ctp',
+)
+Request URL: /users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\View\View.php(595): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Mailer\Email.php(1917): Cake\View\View->render()
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Mailer\Email.php(1783): Cake\Mailer\Email->_renderTemplates('')
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Mailer\Email.php(1336): Cake\Mailer\Email->_render(Array)
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Mailer\Mailer.php(250): Cake\Mailer\Email->send()
+#5 C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php(190): Cake\Mailer\Mailer->send('forgotPasswordE...', Array)
+#6 [internal function]: App\Controller\UsersController->forgotPassword()
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#15 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#17 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#19 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#20 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#21 {main}
+
+
+2017-01-18 17:31:49 Error: [Cake\View\Exception\MissingTemplateException] Template file "Email\text\gevetik_forgot_email_template.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Email\\text\\gevetik_forgot_email_template.ctp',
+)
+Request URL: /users/forgot-password
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/forgot-password
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\View\View.php(595): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Mailer\Email.php(1917): Cake\View\View->render()
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Mailer\Email.php(1783): Cake\Mailer\Email->_renderTemplates('')
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Mailer\Email.php(1336): Cake\Mailer\Email->_render(Array)
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Mailer\Mailer.php(250): Cake\Mailer\Email->send()
+#5 C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php(190): Cake\Mailer\Mailer->send('forgotPasswordE...', Array)
+#6 [internal function]: App\Controller\UsersController->forgotPassword()
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#15 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#17 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#19 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#20 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#21 {main}
+
+
+2017-01-18 18:03:52 Error: [BadMethodCallException] Unknown method "validationPassword"
+Request URL: /users/reset-password/7943b2fe6377fbc852b0365842dcb5de12ee9d4316261da8653a84928ff868ca
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/reset-password/7943b2fe6377fbc852b0365842dcb5de12ee9d4316261da8653a84928ff868ca
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(108): Cake\ORM\Table->__call('validationPassw...', Array)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(108): App\Model\Table\UsersTable->validationPassword(Object(Cake\Validation\Validator))
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Marshaller.php(237): Cake\ORM\Table->validator('password')
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Marshaller.php(533): Cake\ORM\Marshaller->_validate(Array, Array, false)
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(2236): Cake\ORM\Marshaller->merge(Object(App\Model\Entity\User), Array, Array)
+#5 C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php(215): Cake\ORM\Table->patchEntity(Object(App\Model\Entity\User), Array, Array)
+#6 [internal function]: App\Controller\UsersController->resetPassword('7943b2fe6377fbc...')
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#15 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#17 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#19 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#20 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#21 {main}
+
+
+2017-01-18 18:05:28 Error: [BadMethodCallException] Unknown method "validationPassword"
+Request URL: /users/reset-password/7943b2fe6377fbc852b0365842dcb5de12ee9d4316261da8653a84928ff868ca
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/reset-password/7943b2fe6377fbc852b0365842dcb5de12ee9d4316261da8653a84928ff868ca
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(108): Cake\ORM\Table->__call('validationPassw...', Array)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(108): App\Model\Table\UsersTable->validationPassword(Object(Cake\Validation\Validator))
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Marshaller.php(237): Cake\ORM\Table->validator('password')
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Marshaller.php(533): Cake\ORM\Marshaller->_validate(Array, Array, false)
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(2236): Cake\ORM\Marshaller->merge(Object(App\Model\Entity\User), Array, Array)
+#5 C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php(215): Cake\ORM\Table->patchEntity(Object(App\Model\Entity\User), Array, Array)
+#6 [internal function]: App\Controller\UsersController->resetPassword('7943b2fe6377fbc...')
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#15 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#17 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#19 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#20 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#21 {main}
+
+
+2017-01-18 18:05:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/base.css
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-01-18 18:05:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/cake.css
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-01-18 18:06:26 Error: [BadMethodCallException] Unknown method "validationPassword"
+Request URL: /users/reset-password/f89ab85dd509565032ff62c4a545c7df17720c60ea50a6cb0eef93548b42ddad
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/reset-password/f89ab85dd509565032ff62c4a545c7df17720c60ea50a6cb0eef93548b42ddad
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(108): Cake\ORM\Table->__call('validationPassw...', Array)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(108): App\Model\Table\UsersTable->validationPassword(Object(Cake\Validation\Validator))
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Marshaller.php(237): Cake\ORM\Table->validator('password')
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Marshaller.php(533): Cake\ORM\Marshaller->_validate(Array, Array, false)
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(2236): Cake\ORM\Marshaller->merge(Object(App\Model\Entity\User), Array, Array)
+#5 C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php(215): Cake\ORM\Table->patchEntity(Object(App\Model\Entity\User), Array, Array)
+#6 [internal function]: App\Controller\UsersController->resetPassword('f89ab85dd509565...')
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#15 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#17 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#19 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#20 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#21 {main}
+
+
+2017-01-18 18:18:12 Error: Fatal Error (1): Call to undefined function App\Controller\di() in [C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php, line 204]
+Request URL: /gevetikv2/gevetikv2/users/reset-password/f89ab85dd509565032ff62c4a545c7df17720c60ea50a6cb0eef93548b42ddad
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/reset-password/f89ab85dd509565032ff62c4a545c7df17720c60ea50a6cb0eef93548b42ddad
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2017-01-18 18:18:13 Warning: Headers already sent in C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php:204
+2017-01-18 18:18:13 Error: [Cake\Error\FatalErrorException] Call to undefined function App\Controller\di()
+Request URL: /gevetikv2/gevetikv2/users/reset-password/f89ab85dd509565032ff62c4a545c7df17720c60ea50a6cb0eef93548b42ddad
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/reset-password/f89ab85dd509565032ff62c4a545c7df17720c60ea50a6cb0eef93548b42ddad
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\wamp64\\www\\g...', 204)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-01-18 18:23:34 Error: [BadMethodCallException] Unknown method "validationPassword"
+Request URL: /users/reset-password/f89ab85dd509565032ff62c4a545c7df17720c60ea50a6cb0eef93548b42ddad
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/reset-password/f89ab85dd509565032ff62c4a545c7df17720c60ea50a6cb0eef93548b42ddad
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(108): Cake\ORM\Table->__call('validationPassw...', Array)
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(108): App\Model\Table\UsersTable->validationPassword(Object(Cake\Validation\Validator))
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Marshaller.php(237): Cake\ORM\Table->validator('password')
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Marshaller.php(533): Cake\ORM\Marshaller->_validate(Array, Array, false)
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\ORM\Table.php(2236): Cake\ORM\Marshaller->merge(Object(App\Model\Entity\User), Array, Array)
+#5 C:\wamp64\www\gevetikv2\gevetikv2\src\Controller\UsersController.php(217): Cake\ORM\Table->patchEntity(Object(App\Model\Entity\User), Array, Array)
+#6 [internal function]: App\Controller\UsersController->resetPassword('f89ab85dd509565...')
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#13 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#15 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#17 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#19 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#20 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#21 {main}
+
+
+2017-01-18 18:31:32 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::display() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'display',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /users/display
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/reset-password/f89ab85dd509565032ff62c4a545c7df17720c60ea50a6cb0eef93548b42ddad
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-01-18 18:31:54 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::display() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'display',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /users/display
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/users/reset-password/f89ab85dd509565032ff62c4a545c7df17720c60ea50a6cb0eef93548b42ddad
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-01-18 18:37:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/cake.css
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-01-18 18:37:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/base.css
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/
+Stack Trace:
+#0 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 C:\wamp64\www\gevetikv2\gevetikv2\webroot\index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+

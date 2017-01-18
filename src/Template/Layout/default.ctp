@@ -86,7 +86,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </div>
     <br>
 </body>
-<footer class="panel-footer">
+<footer class="navbar-fixed-bottom">
             <p>Gevetik © 2017, All Rights Reserved
             </p>
 </footer>  

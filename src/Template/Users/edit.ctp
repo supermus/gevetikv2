@@ -24,7 +24,10 @@
             echo $this->Form->input('nom',['label'=>'Nom']);
             echo $this->Form->input('prenom',['label'=>'Prenom']);
             echo $this->Form->input('datedenaissance',['minYear'=>date('Y')-70, 'maxYear'=>date('Y'),'label'=>'Date de naissance']);
-            echo $this->Form->input('role',['label'=>'Role']);
+            echo $this->Form->input('role',['options'=>['admin'=>'Administrateur',
+            'visiteur'=>'Visiteur',
+            'finance'=>'Finance',
+            'organisateur'=>'Organisateur']]);
             echo $this->Form->input('adresse',['label'=>'Adresse']);
         ?>
     </fieldset>

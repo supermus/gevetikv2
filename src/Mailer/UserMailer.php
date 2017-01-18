@@ -23,7 +23,10 @@ class UserMailer extends Mailer
             ->emailFormat('html')
             ->template('gevetik_email_template')
             ->layout('user')
-            ->viewVars(['name'=>$user->frame])
-            ->subject(sprintf('Bonjour , %s', $user->frame));
+            ->viewVars(['name'=>$user->nom])
+            ->subject(sprintf('Bonjour , %s', $user->nom));
     }
+
+
+
 }

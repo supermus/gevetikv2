@@ -22,6 +22,7 @@
         <div class="etc-login-form">
             <p>Nouveau utilisateur ? 
             <?= $this->Html->Link('Créer un compte.',['controller'=>'users\inscription']); ?>
+                <?= $this->Html->Link('Mot de passe oublié ?',['controller'=>'users\forgotPassword']); ?>
         </div>
 </div>
 </div>

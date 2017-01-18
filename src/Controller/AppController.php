@@ -29,7 +29,7 @@ class AppController extends Controller
 {
     public function beforeFilter(Event $event)
     {    //fonction qui permet d'accéder au différent page sans connexion
-        $this->Auth->allow(['inscription','login','logout','display']);
+        $this->Auth->allow(['inscription','login','logout','display','forgotPassword','resetPassword']);
     }
     /**
      * Initialization hook method.

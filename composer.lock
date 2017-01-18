@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+    "hash": "ac91e6a9fc5b60e864072a2797ced24f",
     "content-hash": "6f62a3b506f04f8641162174e86a689b",
     "packages": [
         {
@@ -45,7 +46,7 @@
                 "aura",
                 "installer"
             ],
-            "time": "2012-11-26T21:35:57+00:00"
+            "time": "2012-11-26 21:35:57"
         },
         {
             "name": "aura/intl",
@@ -123,7 +124,7 @@
                 "l10n",
                 "localization"
             ],
-            "time": "2014-08-24T00:00:00+00:00"
+            "time": "2014-08-24 00:00:00"
         },
         {
             "name": "cakephp/cakephp",
@@ -196,7 +197,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-12-12T03:46:25+00:00"
+            "time": "2016-12-12 03:46:25"
         },
         {
             "name": "cakephp/chronos",
@@ -251,7 +252,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2016-12-09T06:28:06+00:00"
+            "time": "2016-12-09 06:28:06"
         },
         {
             "name": "cakephp/migrations",
@@ -301,7 +302,7 @@
                 "cakephp",
                 "migrations"
             ],
-            "time": "2016-11-14T21:54:46+00:00"
+            "time": "2016-11-14 21:54:46"
         },
         {
             "name": "cakephp/plugin-installer",
@@ -341,7 +342,7 @@
                 }
             ],
             "description": "A composer installer for CakePHP 3.0+ plugins.",
-            "time": "2016-04-28T03:01:34+00:00"
+            "time": "2016-04-28 03:01:34"
         },
         {
             "name": "friendsofcake/bootstrap-ui",
@@ -391,7 +392,7 @@
                 "cakephp",
                 "twitter"
             ],
-            "time": "2017-01-15T17:09:39+00:00"
+            "time": "2017-01-15 17:09:39"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -445,7 +446,7 @@
                 "mobile detector",
                 "php mobile detect"
             ],
-            "time": "2016-11-11T14:56:25+00:00"
+            "time": "2016-11-11 14:56:25"
         },
         {
             "name": "psr/http-message",
@@ -495,7 +496,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06T14:39:51+00:00"
+            "time": "2016-08-06 14:39:51"
         },
         {
             "name": "psr/log",
@@ -542,7 +543,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10T12:19:37+00:00"
+            "time": "2016-10-10 12:19:37"
         },
         {
             "name": "robmorgan/phinx",
@@ -603,7 +604,7 @@
                 "migrations",
                 "phinx"
             ],
-            "time": "2016-03-07T14:09:22+00:00"
+            "time": "2016-03-07 14:09:22"
         },
         {
             "name": "symfony/config",
@@ -659,7 +660,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-09T07:45:17+00:00"
+            "time": "2016-12-09 07:45:17"
         },
         {
             "name": "symfony/console",
@@ -722,7 +723,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-11T14:34:22+00:00"
+            "time": "2016-12-11 14:34:22"
         },
         {
             "name": "symfony/debug",
@@ -779,7 +780,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-16T22:18:16+00:00"
+            "time": "2016-11-16 22:18:16"
         },
         {
             "name": "symfony/filesystem",
@@ -828,7 +829,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-24T00:46:43+00:00"
+            "time": "2016-11-24 00:46:43"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -887,7 +888,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2016-11-14 01:06:16"
         },
         {
             "name": "symfony/yaml",
@@ -942,7 +943,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-10T10:07:06+00:00"
+            "time": "2016-12-10 10:07:06"
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -992,7 +993,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2016-10-11T13:25:21+00:00"
+            "time": "2016-10-11 13:25:21"
         }
     ],
     "packages-dev": [
@@ -1041,7 +1042,7 @@
                 "bake",
                 "cakephp"
             ],
-            "time": "2016-09-03T13:29:04+00:00"
+            "time": "2016-09-03 13:29:04"
         },
         {
             "name": "cakephp/debug_kit",
@@ -1098,7 +1099,7 @@
                 "debug",
                 "kit"
             ],
-            "time": "2016-12-10T03:19:30+00:00"
+            "time": "2016-12-10 03:19:30"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1131,7 +1132,7 @@
                 "MIT"
             ],
             "description": "implementation of xdg base directory specification for php",
-            "time": "2014-10-24T07:27:01+00:00"
+            "time": "2014-10-24 07:27:01"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1174,7 +1175,7 @@
                     "homepage": "http://www.acci.cz"
                 }
             ],
-            "time": "2014-04-08T15:00:19+00:00"
+            "time": "2014-04-08 15:00:19"
         },
         {
             "name": "jakub-onderka/php-console-highlighter",
@@ -1218,7 +1219,7 @@
                     "homepage": "http://www.acci.cz/"
                 }
             ],
-            "time": "2015-04-20T18:58:01+00:00"
+            "time": "2015-04-20 18:58:01"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -1268,7 +1269,7 @@
                 "highlight",
                 "sql"
             ],
-            "time": "2014-01-12T16:20:24+00:00"
+            "time": "2014-01-12 16:20:24"
         },
         {
             "name": "nikic/php-parser",
@@ -1319,7 +1320,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2016-12-06T11:30:35+00:00"
+            "time": "2016-12-06 11:30:35"
         },
         {
             "name": "psy/psysh",
@@ -1392,7 +1393,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2016-12-07T17:15:07+00:00"
+            "time": "2016-12-07 17:15:07"
         },
         {
             "name": "symfony/var-dumper",
@@ -1455,7 +1456,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2016-12-11T14:34:22+00:00"
+            "time": "2016-12-11 14:34:22"
         }
     ],
     "aliases": [],

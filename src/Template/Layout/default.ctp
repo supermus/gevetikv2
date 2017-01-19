@@ -80,7 +80,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <div class="container clearfix" style="width:100%;">
         
     <?php echo $this->Flash->render() ?>
-      <div class="row">
+      <div class="row ">
+          <br><br>
             <?= $this->fetch('content') ?>
       </div>
     </div>

@@ -4,12 +4,16 @@
     </ul>
 
 </div>
+<?php
+//debug($evenements);
+//die();
+?>
 
 <div class="col-md-6 col-md-offset-1">
     <?php foreach ($evenements as $evenement): ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <a href="#" class="MakaleYazariAdi"><?= h($evenement->nom_evenement)?></a>
+            <?php echo $this->Html->link($evenement->nom_evenement, ['controller' => 'evenements', 'action' => 'view', $evenement->id]); ?>
             <div class="btn-group" style="float:right;">
             	<button type="button" class="btn btn-danger" >Je participe
             	</button>
@@ -27,12 +31,13 @@
                 <div class="media-body">
                 <h4 class="media-heading"><?= h($evenement->description)?></h4>
                     <label class="label label-warning">Adresse : </label>&nbsp;
-                    <span class="label label-warning"><?= h($evenement->adresse)?></span>
+                    <span class="label label-warning"><?= h($evenement->adresse)?></span><br>
+                    <label class="label label-info">Date de début : </label>&nbsp;
+                    <span class="label label-info"><?= h($evenement->date_debut)?></span>&nbsp;
+                    <label class="label label-info">Date de fin : </label>&nbsp;
+                    <span class="label label-info"><?= h($evenement->date_fin)?></span>
                 <div class="clearfix"></div>
-                <div class="btn-group" role="group" id="BegeniButonlari">
-                    <label class="label label-info">Prix : </label>&nbsp;
-                    <span class="label label-info"><?= h($evenement->prix_unitaire_extra_page)?></span>
-                </div>                 
+
                </div>
             </div>
         </div>
@@ -55,11 +60,21 @@
     <table class="table table-striped table-hover">
         <tr>
             <th>Description</th>
-            <th>Enregistrement tôt</th>
+            <th>Enregistrement total</th>
             <th>Prix normal</th>
         </tr>
-        <?php
-        //ceci est inspiré de la part des anciens 
-        ?>
+
+            <?php
+            foreach ($categories as $cat) {
+                echo '<tr>';
+                echo '<td>'; echo ($cat->category->nom_categorie) ;echo '</td>';
+                $remise = $cat->category->evenement->remise;
+                $prix_unitaire = $cat->prix_unitaire;
+                echo '<td>'; echo $prixtotale= $prix_unitaire-$remise; echo '</td>';
+                echo '<td>'; echo ($cat->prix_unitaire) ;echo '</td>';
+                echo '</tr>';
+                }
+            ?>
+
     </table>
 </div>

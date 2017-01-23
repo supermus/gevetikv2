@@ -27,10 +27,12 @@ body{
 a {
   color: #aaaaaa;
   transition: all ease-in-out 200ms;
+  width:150px;
 }
 a:hover {
   color: #333333;
   text-decoration: none;
+  width:150px;
 }
 /*=== 3. Text Outside the Box ===*/
 .etc-login-form {

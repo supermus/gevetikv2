@@ -1,5 +1,5 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+<nav class="col-md-1 sidebar" id="actions-sidebar">
+    <ul class="nav nav-sidebar">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Evenements'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Article'), ['controller' => 'Articles', 'action' => 'index']) ?></li>
@@ -12,7 +12,7 @@
         <li><?= $this->Html->link(__('New Reservation'), ['controller' => 'Reservations', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="evenements form large-9 medium-8 columns content">
+<div class="col-md-6 col-md-offset-2">
     <?= $this->Form->create($evenement) ?>
     <fieldset>
         <legend><?= __('Add Evenement') ?></legend>
@@ -34,6 +34,6 @@
             echo $this->Form->input('prix_unitaire_extra_page');
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Enregistrer')) ?>
     <?= $this->Form->end() ?>
 </div>

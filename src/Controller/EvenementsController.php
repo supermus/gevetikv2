@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use Cake\ORM\TableRegistry;
 /**
  * Evenements Controller
  *
@@ -20,6 +20,16 @@ class EvenementsController extends AppController
     {
         $evenements = $this->paginate($this->Evenements);
 
+        //pour faire le lien entre evenemtn categorie
+        $categories = TableRegistry::get('Categories');
+        $options = TableRegistry::get('Options');
+
+        $query = $options->find('all')
+            ->contain(['Categories.Evenements']);
+        $this->set('categories', $query);
+
+
+
         $this->set(compact('evenements'));
         $this->set('_serialize', ['evenements']);
     }
@@ -34,7 +44,7 @@ class EvenementsController extends AppController
     public function view($id = null)
     {
         $evenement = $this->Evenements->get($id, [
-            'contain' => ['Article', 'Categorie', 'Organisateur', 'Reservation']
+            'contain' => []
         ]);
 
         $this->set('evenement', $evenement);

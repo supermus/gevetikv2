@@ -1,10 +1,10 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+<nav class="col-md-1 sidebar" id="actions-sidebar">
+    <ul class="nav nav-sidebar">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
-                __('Delete'),
+                __('Supprimer'),
                 ['action' => 'delete', $evenement->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $evenement->id)]
+                ['confirm' => __('Voulez vous vraiment supprimer ? # {0}?', $evenement->id)]
             )
         ?></li>
         <li><?= $this->Html->link(__('List Evenements'), ['action' => 'index']) ?></li>
@@ -18,10 +18,10 @@
         <li><?= $this->Html->link(__('New Reservation'), ['controller' => 'Reservations', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="evenements form large-9 medium-8 columns content">
+<div class="col-md-6 col-md-offset-2">
     <?= $this->Form->create($evenement) ?>
     <fieldset>
-        <legend><?= __('Edit Evenement') ?></legend>
+        <legend><?= __('Editer Evenement') ?></legend>
         <?php
             echo $this->Form->input('nom_evenement');
             echo $this->Form->input('slug_evenement');
@@ -40,6 +40,6 @@
             echo $this->Form->input('prix_unitaire_extra_page');
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Sauvegarder')) ?>
     <?= $this->Form->end() ?>
 </div>

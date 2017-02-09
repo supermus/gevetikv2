@@ -39,16 +39,16 @@ class EvenementsTable extends Table
         $this->displayField('id');
         $this->primaryKey('id');
 
-        $this->hasMany('Article', [
+        $this->hasMany('Articles', [
             'foreignKey' => 'evenement_id'
         ]);
-        $this->hasMany('Categorie', [
+        $this->hasMany('Categories', [
             'foreignKey' => 'evenement_id'
         ]);
-        $this->hasMany('Organisateur', [
+        $this->hasMany('Organisateurs', [
             'foreignKey' => 'evenement_id'
         ]);
-        $this->hasMany('Reservation', [
+        $this->hasMany('Reservations', [
             'foreignKey' => 'evenement_id'
         ]);
     }
@@ -71,8 +71,8 @@ class EvenementsTable extends Table
 
         $validator
             ->requirePresence('slug_evenement', 'create')
-            ->notEmpty('slug_evenement')
-            ->add('slug_evenement', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
+            ->notEmpty('slug_evenement');
+
 
         $validator
             ->requirePresence('description', 'create')

@@ -1,22 +1,29 @@
 <div class="col-md-1 sidebar">
     <ul class="nav nav-sidebar">
 
-    </ul>
+                <li><?= $this->Html->link(__('Ajouter un evenement '), ['action' => 'add']) ?> </li>
 
-</div>
+            </ul>
+        </div>
 <?php
 //debug($evenements);
 //die();
 ?>
 
 <div class="col-md-6 col-md-offset-1">
+    <br>
     <?php foreach ($evenements as $evenement): ?>
     <div class="panel panel-default">
         <div class="panel-heading">
             <?php echo $this->Html->link($evenement->nom_evenement, ['controller' => 'evenements', 'action' => 'view', $evenement->id]); ?>
             <div class="btn-group" style="float:right;">
-            	<button type="button" class="btn btn-danger" >Je participe
-            	</button>
+                <?php echo $this->Html->link(
+                'Je participe',
+                ['controller' => 'evenements', 'action' => 'view',$evenement->id]
+                    ,['class'=>'btn btn-danger']
+                );
+                ?>
+
             </div>
             <div class="clearfix"></div>
         </div>

@@ -13,7 +13,8 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'Gevetik';
+$user = $this->Session->read('Auth.User');
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,6 +29,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->css('bootstrap') ?>
     <?= $this->Html->script(['bootstrap.min']) ?>
     <?= $this->Html->css('font-awesome') ?>
+    <?= $this->Html->css('contact') ?>
     <?= $this->Html->css('login') ?>
     <?= $this->Html->script(['login']) ?>
     <?= $this->fetch('meta') ?>
@@ -45,54 +47,71 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </li>
         </ul>-->
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Gevetik</a>
+            <?= $this->Html->Link('Gevetik',['controller'=>'pages','action'=>'home'],['class'=>'navbar-brand']); ?>
         </div>
         <div class="" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <?php if($this->request->session()->read('Auth.User.role')  == 'admin' ) :?>
-                    <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
-                    <li><?= $this->Html->Link('Conférences',['contoller'=>'evenements','action'=>'index']); ?></li>
-                    <li><?= $this->Html->Link('Reservations',['contoller'=>'users','action'=>'logout']); ?></li>
-                    <li><?= $this->Html->Link('Contact',['contoller'=>'users','action'=>'logout']); ?></li>
-                    <li><?= $this->Html->Link('Profil',['contoller'=>'users','action'=>'logout']); ?></li>
-                <?php elseif ($this->request->session()->read('Auth.User.role')  == 'visiteur' ) :?>
-                    <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
-                    <li><?= $this->Html->Link('Conférences',['contoller'=>'evenements','action'=>'index']); ?></li>
-                    <li><?= $this->Html->Link('Reservations',['contoller'=>'users','action'=>'logout']); ?></li>
-                    <li><?= $this->Html->Link('Contact',['contoller'=>'users','action'=>'logout']); ?></li>
-                    <li><?= $this->Html->Link('Profil',['contoller'=>'users','action'=>'logout']); ?></li>
-                <?php else : ?>
-                    <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
-                    <li><?= $this->Html->Link('Conférences',['contoller'=>'evenements','action'=>'index']); ?></li>
-                <?php endif;?>
+                <?php
+                $role = $this->request->session()->read('Auth.User.role');
+                    switch ($role)
+                    {
+                        case 'admin':
+                            ?>
+                            <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
+                            <li><?= $this->Html->Link('Conférences',['controller'=>'evenements','action'=>'index']); ?></li>
+                            <li><?= $this->Html->Link('Reservations',['controller'=>'users','action'=>'logout']); ?></li>
+                            <li><?= $this->Html->Link('Mon profil',['controller'=>'users','action'=>'view',$user['id']]); ?></li>
+                            <li><?= $this->Html->Link('Utilisateures',['controller'=>'users','action'=>'index']); ?></li>
+                <?php
+                            break;
+                        case 'visiteur':
+                            ?>
+                            <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
+                            <li><?= $this->Html->Link('Conférences',['controller'=>'evenements','action'=>'index']); ?></li>
+                            <li><?= $this->Html->Link('Contact',['controller'=>'pages','action'=>'contact']); ?></li>
+                            <li><?= $this->Html->Link('Profil',['controller'=>'users','action'=>'logout']); ?></li>
+                <?php
+                            break;
+                        case 'oragnisateur':
+                            ?>
+                            <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
+                            <li><?= $this->Html->Link('Conférences',['controller'=>'evenements','action'=>'index']); ?></li>
+                            <li><?= $this->Html->Link('Reservations',['controller'=>'users','action'=>'logout']); ?></li>
+                            <li><?= $this->Html->Link('Contact',['controller'=>'pages','action'=>'contact']); ?></li>
+                            <li><?= $this->Html->Link('Profil',['controller'=>'users','action'=>'logout']); ?></li>
+                <?php
+                        default:
+                            ?>
+                            <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
+                            <li><?= $this->Html->Link('Conférences',['controller'=>'evenements','action'=>'index']); ?></li>
+                            <li><?= $this->Html->Link('Contact',['controller'=>'pages','action'=>'contact']); ?></li>
+                <?php
+                    }
+                ?>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php if ($loggedIn) : ?>
-                    <li><?= $this->Html->Link('Deconnecter',['contoller'=>'users','action'=>'logout']); ?></li>
+                    <li><?= $this->Html->Link('Deconnecter',['controller'=>'users','action'=>'logout']); ?></li>
                 <?php else : ?>
                     <li><?= $this->Html->Link('S\'inscrire',['controller'=>'users\inscription']); ?></li>
-                    <li><?= $this->Html->Link('Connecter',['contoller'=>'users','action'=>'login']); ?></li>
+                    <li><?= $this->Html->Link('Connecter',['controller'=>'users','action'=>'login']); ?></li>
                 <?php endif; ?>
             </ul>
         </div>
     </div>
     </nav>
-    <div class="container clearfix" style="width:100%;">
+    <div class="container" style="width:100%;">
         
     <?php echo $this->Flash->render() ?>
       <div class="row ">
-          <br><br>
+
             <?= $this->fetch('content') ?>
       </div>
     </div>
-    <br>
+
 </body>
 <footer class="navbar-fixed-bottom">
-            <p>Gevetik © 2017, All Rights Reserved
-            </p>
+            <p>Gevetik © 2017, All Rights Reserved </p>
 </footer>  
     
 </html>
-
-            <!--
-                -->

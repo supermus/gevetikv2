@@ -11,36 +11,65 @@
     <div class="page-header">
         <h2>détaille de <?= h($user->nom) ?></h2>
     </div>
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Username' ) ?></th>
-            <td><?= h($user->username) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Email') ?></th>
-            <td><?= h($user->email) ?></td>
-        </tr>
 
-        <tr>
-            <th scope="row"><?= __('Nom') ?></th>
-            <td><?= h($user->nom) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Prenom') ?></th>
-            <td><?= h($user->prenom) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Role') ?></th>
-            <td><?= h($user->role) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($user->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Datedenaissance') ?></th>
-            <td><?= h($user->datedenaissance) ?></td>
-        </tr>
-    </table>
+</div>
+<!-------->
+<div class="container">
+    <div class="row">
 
+        <div class="col-md-6 col-md-offset-2" >
+
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><?= h($user->prenom) ?> <?= h($user->nom) ?></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+
+
+                        <div class=" col-md-8 col-lg-8 ">
+                            <table class="table table-user-information">
+                                <tbody>
+                                <tr>
+                                    <td>Nom:</td>
+                                    <td><?= h($user->nom) ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Prenom:</td>
+                                    <td><?= h($user->prenom) ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Date de naissnce:</td>
+                                    <td><?= h($user->datedenaissance) ?></td>
+                                </tr>
+
+                                <tr>
+                                <tr>
+                                    <td>Username:</td>
+                                    <td><?= h($user->username) ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Role:</td>
+                                    <td><?= h($user->role) ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td><a href="<?= h($user->email) ?>"><?= h($user->email) ?></a></td>
+                                </tr>
+
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <?= $this->Html->link(__(""), ['action' => 'edit', $user->id],['class'=>'btn btn-sm btn-warning glyphicon glyphicon-edit']) ?>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>

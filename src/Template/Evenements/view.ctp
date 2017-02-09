@@ -1,83 +1,46 @@
-<nav class="col-md-1 sidebar" id="actions-sidebar">
-    <ul class="nav nav-sidebar">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Evenement'), ['action' => 'edit', $evenement->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Evenement'), ['action' => 'delete', $evenement->id], ['confirm' => __('Are you sure you want to delete # {0}?', $evenement->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Evenements'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Evenement'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Article'), ['controller' => 'Articles', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Article'), ['controller' => 'Articles', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Categorie'), ['controller' => 'Categories', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Categorie'), ['controller' => 'Categories', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Organisateur'), ['controller' => 'Organisateurs', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Organisateur'), ['controller' => 'Organisateurs', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Reservation'), ['controller' => 'Reservations', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Reservation'), ['controller' => 'Reservations', 'action' => 'add']) ?> </li>
-    </ul>
-</nav>
 <div class="col-md-6 col-md-offset-2">
+    <br>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            </div>
+<div class="panel-body">
+    <div class="media">
+        <div class="media-left">
+            <?php echo $this->Html->image($evenement->url_evenement, [
+                "alt" => $evenement->nom_evenement,
+                'url' => ['controller' => 'evenements', 'action' => 'view', $evenement->id]
+            ]); ?>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading"><?= h($evenement->description)?></h4>
 
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Nom Evenement') ?></th>
-            <td><?= h($evenement->nom_evenement) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Slug Evenement') ?></th>
-            <td><?= h($evenement->slug_evenement) ?></td>
-        </tr>
 
-        <tr>
-            <th scope="row"><?= __('Remise') ?></th>
-            <td><?= $this->Number->format($evenement->remise) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Evenement Active') ?></th>
-            <td><?= $this->Number->format($evenement->evenement_active) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Nombre Page Accepte') ?></th>
-            <td><?= $this->Number->format($evenement->nombre_page_accepte) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Prix Unitaire Extra Page') ?></th>
-            <td><?= $this->Number->format($evenement->prix_unitaire_extra_page) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Date Remise') ?></th>
-            <td><?= h($evenement->date_remise) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Date Soumission Debut') ?></th>
-            <td><?= h($evenement->date_soumission_debut) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Date Soumission Fin') ?></th>
-            <td><?= h($evenement->date_soumission_fin) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Date Acceptation') ?></th>
-            <td><?= h($evenement->date_acceptation) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Date Acceptation Definitive') ?></th>
-            <td><?= h($evenement->date_acceptation_definitive) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Date Debut') ?></th>
-            <td><?= h($evenement->date_debut) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Date Fin') ?></th>
-            <td><?= h($evenement->date_fin) ?></td>
-        </tr>
-    </table>
-    <div class="row">
-        <h4><?= __('Description') ?></h4>
-        <?= $this->Text->autoParagraph(h($evenement->description)); ?>
+            <div class="clearfix"></div>
+
+        </div>
+        <div class="clearfix"></div>
+        <div class="media-left">
+            <label class="label label-warning">Adresse : </label>&nbsp;
+            <span class="label label-warning"><?= h($evenement->adresse)?></span><br>
+            <label class="label label-info">Date de début : </label>&nbsp;
+            <span class="label label-info"><?= h($evenement->date_debut)?></span>&nbsp;
+            <label class="label label-info">Date de fin : </label>&nbsp;
+            <span class="label label-info"><?= h($evenement->date_fin)?></span><br>
+            <label class="label label-info">Prix de base : </label>&nbsp;
+            <span class="label label-info"><?= h($prixUnitaire)?></span>&nbsp;
+            <label class="label label-info">Prix aprés remise : </label>&nbsp;
+            <span class="label label-info"><?= h($prixTotale)?></span>
+        </div>
+        <div class="clearfix"></div>
+        <div class="media-body">
+            <?php echo $this->Html->link(
+                'Je réserve',
+                ['controller' => 'reservation', 'action' => 'add',$evenement->id]
+                ,['class'=>'btn btn-primary','style'=>'float: right;']
+            );
+            ?>
+        </div>
     </div>
-    <div class="row">
-        <h4><?= __('Adresse') ?></h4>
-        <?= $this->Text->autoParagraph(h($evenement->adresse)); ?>
+</div>
     </div>
-
+    </div>

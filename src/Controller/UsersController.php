@@ -137,6 +137,7 @@ class UsersController extends AppController
                 /// Ajouter les autres roles avec les bonnes redirections
             }
             //mauvais login
+
             $this->Flash->error('Erreur de connexion !!');
         }
     }
@@ -165,6 +166,7 @@ class UsersController extends AppController
         $this->set(compact('user'));
         $this->set('_serialize', ['user']);
     }
+    
     public function forgotPassword()
     {
         if ($this->request->is('post'))

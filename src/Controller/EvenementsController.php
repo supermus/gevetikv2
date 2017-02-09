@@ -47,6 +47,19 @@ class EvenementsController extends AppController
             'contain' => []
         ]);
 
+        $queryCategorieById = $this->Evenements->Categories->find('all')->where(['evenement_id'=>$id]);
+        $options = TableRegistry::get('Options');
+        $queryOptionPrix = $options->find()->Where(['categorie_id'=>$queryCategorieById->first()->id]);
+       // debug($queryOptionPrix->first()->prix_unitaire);
+        //die();
+        $queryPixTotale = ($queryOptionPrix->first()->prix_unitaire) - ($evenement->remise);
+        
+        $this->set('prixUnitaire', $queryOptionPrix->first()->prix_unitaire);
+        $this->set('prixTotale', $queryOptionPrix->first()->prix_unitaire);
+
+
+
+
         $this->set('evenement', $evenement);
         $this->set('_serialize', ['evenement']);
     }
@@ -58,10 +71,26 @@ class EvenementsController extends AppController
      */
     public function add()
     {
+        //crétion de la table organisateur
+        $organisateurTable = TableRegistry::get('Organisateurs');
+        $organisateur = $organisateurTable->newEntity();
+
         $evenement = $this->Evenements->newEntity();
+
         if ($this->request->is('post')) {
             $evenement = $this->Evenements->patchEntity($evenement, $this->request->data);
             if ($this->Evenements->save($evenement)) {
+                //mettre les infos dans organisateur et enregistrer dans la table organisateur
+                $organisateur->evenement_id = $evenement['id'];
+                $organisateur->participant_id =  $this->request->session()->read('Auth.User.id');
+                $organisateur->role =  $this->request->session()->read('Auth.User.role');
+                if($this->request->session()->read('Auth.User.role') == 'organisateur')
+                {
+                    $organisateur->est_organisateur = true;
+                }
+
+                $organisateurTable->save($organisateur);
+
                 $this->Flash->success(__('The evenement has been saved.'));
 
                 return $this->redirect(['action' => 'index']);

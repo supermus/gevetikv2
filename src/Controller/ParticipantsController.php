@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
 /**
  * Participants Controller
@@ -48,10 +49,16 @@ class ParticipantsController extends AppController
      */
     public function add()
     {
+        $user = $this->Auth->user();
+        debug($user);
         $participant = $this->Participants->newEntity();
         if ($this->request->is('post')) {
-            $participant = $this->Participants->patchEntity($participant, $this->request->data);
+            $participant->nom_participant = $user['nom'];
+            $participant->prenom_participant = $user['prenom'];
+            $participant->email_participant = $user['email'];
+            $this->Participants->pahtchEntity($participant, $this->request->data);
             if ($this->Participants->save($participant)) {
+                echo '<br><br>';
                 $this->Flash->success(__('The participant has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
@@ -62,6 +69,8 @@ class ParticipantsController extends AppController
         $this->set(compact('participant'));
         $this->set('_serialize', ['participant']);
     }
+
+
 
     /**
      * Edit method

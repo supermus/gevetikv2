@@ -25,7 +25,7 @@
 					</div>
 					
 					<div class="form-group">
-                        <?= $this->Form->input('datedenaissance', array('label'=>'')); ?>
+                        <?= $this->Form->input('datedenaissance',['minYear'=>date('Y')-70, 'maxYear'=>date('Y'),'label'=>'Date de naissance']); ?>
 					</div>
                     
 					<div class="form-group">

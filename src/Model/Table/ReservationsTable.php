@@ -10,9 +10,8 @@ use Cake\Validation\Validator;
  * Reservations Model
  *
  * @property \Cake\ORM\Association\BelongsTo $Evenements
- * @property \Cake\ORM\Association\BelongsTo $Paiement
+ * @property \Cake\ORM\Association\BelongsTo $Paiements
  * @property \Cake\ORM\Association\BelongsTo $Participants
- * @property \Cake\ORM\Association\HasMany $Paiement
  *
  * @method \App\Model\Entity\Reservation get($primaryKey, $options = [])
  * @method \App\Model\Entity\Reservation newEntity($data = null, array $options = [])
@@ -43,7 +42,7 @@ class ReservationsTable extends Table
             'foreignKey' => 'evenement_id',
             'joinType' => 'INNER'
         ]);
-        $this->belongsTo('Paiement', [
+        $this->belongsTo('Paiements', [
             'foreignKey' => 'paiement_id',
             'joinType' => 'INNER'
         ]);
@@ -51,9 +50,9 @@ class ReservationsTable extends Table
             'foreignKey' => 'participant_id',
             'joinType' => 'INNER'
         ]);
-        $this->hasMany('Paiement', [
+        /*$this->hasMany('Paiement', [
             'foreignKey' => 'reservation_id'
-        ]);
+        ]);*/
     }
 
     /**

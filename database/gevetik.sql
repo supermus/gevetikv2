@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2017 at 11:31 PM
+-- Generation Time: Feb 10, 2017 at 11:20 PM
 -- Server version: 5.7.9
 -- PHP Version: 5.6.16
 
@@ -62,14 +62,18 @@ CREATE TABLE IF NOT EXISTS `categories` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique` (`slug_categorie`,`evenement_id`),
   KEY `FK_evemement` (`evenement_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`id`, `evenement_id`, `nom_categorie`, `slug_categorie`) VALUES
-(1, 1, 'categorie1', 'categorie1');
+(1, 1, 'categorie1', 'categorie1'),
+(2, 2, 'categorie2', 'categorie2'),
+(3, 25, 'testcateg', 'testcateg'),
+(4, 26, 'testoption', 'testoption'),
+(5, 27, 'testimage', 'testimage');
 
 -- --------------------------------------------------------
 
@@ -92,47 +96,54 @@ CREATE TABLE IF NOT EXISTS `evenements` (
   `date_acceptation_definitive` date NOT NULL,
   `date_debut` date NOT NULL,
   `date_fin` date NOT NULL,
-  `evenement_active` tinyint(4) NOT NULL DEFAULT '0',
+  `evenement_active` tinyint(1) NOT NULL,
   `nombre_page_accepte` int(10) NOT NULL DEFAULT '0',
   `prix_unitaire_extra_page` int(10) NOT NULL DEFAULT '0',
   `url_evenement` varchar(255) NOT NULL DEFAULT 'event.jpg',
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique` (`slug_evenement`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `evenements`
 --
 
 INSERT INTO `evenements` (`id`, `nom_evenement`, `slug_evenement`, `description`, `adresse`, `remise`, `date_remise`, `date_soumission_debut`, `date_soumission_fin`, `date_acceptation`, `date_acceptation_definitive`, `date_debut`, `date_fin`, `evenement_active`, `nombre_page_accepte`, `prix_unitaire_extra_page`, `url_evenement`) VALUES
-(1, 'evenements', 'evenements', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'ibgbi, 91000 Evry ', 0, '2016-11-02', '2016-11-02', '2016-11-03', '2016-11-01', '2016-11-02', '2016-11-03', '2016-11-04', 0, 0, 10, 'event.jpg');
+(1, 'evenements', 'evenements', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'ibgbi, 91000 Evry ', 0, '2016-11-02', '2016-11-02', '2016-11-03', '2016-11-01', '2016-11-02', '2016-11-03', '2016-11-04', 0, 0, 10, 'event.jpg'),
+(2, 'BU Party', 'bup', 'ALors c''est le cour de la bu trop stylé ta mere mdr \r\non fais des pe tite blague avec la dame', 'boulvard deepse eeslk qzkl', 3, '2014-02-06', '2015-02-06', '2018-02-06', '2020-02-06', '2019-02-06', '2017-02-06', '2017-02-06', 1, 3, 0, 'event.jpg'),
+(25, 'testcateg', 'testcateg', 'testcateg', 'testcateg', 0, '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', 0, 0, 0, 'event.jpg'),
+(26, 'testoption', 'testoption', 'testoption', 'testoption', 0, '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', 0, 0, 0, 'event.jpg'),
+(27, 'testimage', 'testimage', 'testimage', 'testimage', 0, '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', 0, 0, 0, '4.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `option`
+-- Table structure for table `options`
 --
 
-DROP TABLE IF EXISTS `option`;
-CREATE TABLE IF NOT EXISTS `option` (
-  `option_id` int(10) NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS `options`;
+CREATE TABLE IF NOT EXISTS `options` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `categorie_id` int(10) NOT NULL,
   `nom_option` varchar(50) NOT NULL,
   `slug_option` varchar(50) NOT NULL,
   `prix_unitaire` float(10,2) NOT NULL DEFAULT '0.00',
   `quantite_minimum` int(10) NOT NULL DEFAULT '0',
   `quantite_maximum` int(10) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`option_id`),
+  PRIMARY KEY (`id`),
   UNIQUE KEY `unique` (`slug_option`,`categorie_id`),
   KEY `FK_categorie` (`categorie_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `option`
+-- Dumping data for table `options`
 --
 
-INSERT INTO `option` (`option_id`, `categorie_id`, `nom_option`, `slug_option`, `prix_unitaire`, `quantite_minimum`, `quantite_maximum`) VALUES
-(1, 1, 'option1', 'option1', 4.00, 1, 4);
+INSERT INTO `options` (`id`, `categorie_id`, `nom_option`, `slug_option`, `prix_unitaire`, `quantite_minimum`, `quantite_maximum`) VALUES
+(1, 1, 'option1', 'option1', 4.00, 1, 4),
+(2, 2, 'option2', 'option2', 10.00, 1, 4),
+(3, 4, 'testoption', 'testoption', 5.00, 1, 1),
+(4, 5, 'testimage', 'testimage', 2.00, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -167,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `organisateurs` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQUE` (`evenement_id`,`participant_id`),
   KEY `FK_participant_organisateur` (`participant_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -296,7 +307,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `nom`, `prenom`, `datedenaissance`, `role`, `adresse`, `password_reset_token`, `hashval`) VALUES
-(7, 'admin', '', '$2y$10$fSptILFpTkviGxYMjAGEzeXNMFMjpcu4Dixz683uaDHxWou58SuHC', 'admin', 'istrateur', '2017-01-13', 'admin', '', '', ''),
+(7, 'admin', 'gevetik@gmail.com', '$2y$10$fSptILFpTkviGxYMjAGEzeXNMFMjpcu4Dixz683uaDHxWou58SuHC', 'admin', 'istrateur', '2017-01-13', 'admin', '', '', ''),
 (21, 'visiteur', 'visiteur@visiteur.visiteur', '$2y$10$np0PB19I5WKFUifdHrRBZep3xM0AlA1XIBSZo0j51sFw8Y/Bm1xkC', 'visiteur', 'visiteur', '2017-01-13', 'visiteur', 'visiteur', '', ''),
 (56, 'gevetik', 'el-madi@live.fr', '$2y$10$7PbWwaZ/sS8EwRFvze.bKuSoTdhUN1hGCzmrmeTCiQKwPWL5Iy.Va', 'ELMADI', 'MUSTAPHA', '2017-01-18', 'visiteur', '7 RUE DE LA CLAIRIERE APPRT 716', '26620bc0e2df9dfc838780238666c87cae7503cd', '9ef0079401f4032c2de24a3b347715c960bc8228'),
 (57, 'abdel', 'abdelnaji91@gmail.com', '$2y$10$h5sUF37F0Be7HL8MumNyW.K3Okh5Pu0QlHy/IETZo7.hDq5FGT91K', 'abdel', 'abdel', '2017-01-18', 'visiteur', 'abdel', NULL, NULL);
@@ -318,16 +329,16 @@ ALTER TABLE `categories`
   ADD CONSTRAINT `FK_evemement` FOREIGN KEY (`evenement_id`) REFERENCES `evenements` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `option`
+-- Constraints for table `options`
 --
-ALTER TABLE `option`
+ALTER TABLE `options`
   ADD CONSTRAINT `FK_categorie` FOREIGN KEY (`categorie_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `option_paiement`
 --
 ALTER TABLE `option_paiement`
-  ADD CONSTRAINT `FK_option_option_paiement` FOREIGN KEY (`option_id`) REFERENCES `option` (`option_id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `FK_option_option_paiement` FOREIGN KEY (`option_id`) REFERENCES `options` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `FK_paiement_option_paiement` FOREIGN KEY (`paiement_id`) REFERENCES `paiement` (`paiement_id`) ON DELETE CASCADE;
 
 --

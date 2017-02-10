@@ -1,4 +1,3 @@
-<?= $this->Html->css('page') ?>
 <style>
   .navbar-fixed-bottom{
     display: none;
@@ -12,7 +11,7 @@
   <ol class="carousel-indicators">
     <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
     <li data-target="#bs-carousel" data-slide-to="1"></li>
-    <li data-target="#bs-carousel" data-slide-to="2"></li>
+
   </ol>
   
   <!-- Wrapper for slides -->
@@ -21,10 +20,15 @@
       <div class="slide-1"></div>
       <div class="hero">
         <hgroup>
-            <h1>We are creative</h1>        
-            <h3>Get start your next awesome project</h3>
+            <h1>Participez</h1>
+            <h3>Tous le monde est le bienvenue</h3>
         </hgroup>
-        <button class="btn btn-hero btn-lg" role="button">See all features</button>
+        <?php echo $this->Html->link(
+            'Lire la suite',
+            ['controller' => 'evenements', 'action' => 'view',1]
+            ,['class'=>'btn btn-danger']
+        );
+        ?>
       </div>
     </div>
     <div class="item slides">
@@ -37,15 +41,6 @@
         <button class="btn btn-hero btn-lg" role="button">See all features</button>
       </div>
     </div>
-    <div class="item slides">
-      <div class="slide-3"></div>
-      <div class="hero">        
-        <hgroup>
-            <h1>We are amazing</h1>        
-            <h3>Get start your next awesome project</h3>
-        </hgroup>
-        <button class="btn btn-hero btn-lg" role="button">See all features</button>
-      </div>
-    </div>
+    
   </div> 
 </div>

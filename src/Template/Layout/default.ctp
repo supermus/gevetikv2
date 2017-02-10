@@ -30,6 +30,7 @@ $user = $this->Session->read('Auth.User');
     <?= $this->Html->script(['bootstrap.min']) ?>
     <?= $this->Html->css('font-awesome') ?>
     <?= $this->Html->css('contact') ?>
+    <?= $this->Html->css('page') ?>
     <?= $this->Html->css('login') ?>
     <?= $this->Html->script(['login']) ?>
     <?= $this->fetch('meta') ?>

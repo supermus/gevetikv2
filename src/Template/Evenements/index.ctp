@@ -18,7 +18,7 @@
             <?php echo $this->Html->link($evenement->nom_evenement, ['controller' => 'evenements', 'action' => 'view', $evenement->id]); ?>
             <div class="btn-group" style="float:right;">
                 <?php echo $this->Html->link(
-                'Je participe',
+                'Lire la suite',
                 ['controller' => 'evenements', 'action' => 'view',$evenement->id]
                     ,['class'=>'btn btn-danger']
                 );

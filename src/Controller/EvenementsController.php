@@ -50,12 +50,12 @@ class EvenementsController extends AppController
         $queryCategorieById = $this->Evenements->Categories->find('all')->where(['evenement_id'=>$id]);
         $options = TableRegistry::get('Options');
         $queryOptionPrix = $options->find()->Where(['categorie_id'=>$queryCategorieById->first()->id]);
-       // debug($queryOptionPrix->first()->prix_unitaire);
-        //die();
+
         $queryPixTotale = ($queryOptionPrix->first()->prix_unitaire) - ($evenement->remise);
-        
+
         $this->set('prixUnitaire', $queryOptionPrix->first()->prix_unitaire);
-        $this->set('prixTotale', $queryOptionPrix->first()->prix_unitaire);
+        $this->set('prixTotale', $queryPixTotale);
+
 
 
 
@@ -75,10 +75,17 @@ class EvenementsController extends AppController
         $organisateurTable = TableRegistry::get('Organisateurs');
         $organisateur = $organisateurTable->newEntity();
 
+        $categorieTable = TableRegistry::get('Categories');
+        $categorie = $categorieTable->newEntity();
+
+        $optionTable = TableRegistry::get('Options');
+        $option = $optionTable->newEntity();
+
         $evenement = $this->Evenements->newEntity();
 
         if ($this->request->is('post')) {
             $evenement = $this->Evenements->patchEntity($evenement, $this->request->data);
+
             if ($this->Evenements->save($evenement)) {
                 //mettre les infos dans organisateur et enregistrer dans la table organisateur
                 $organisateur->evenement_id = $evenement['id'];
@@ -88,8 +95,20 @@ class EvenementsController extends AppController
                 {
                     $organisateur->est_organisateur = true;
                 }
-
                 $organisateurTable->save($organisateur);
+                //Maintenant pour categorie
+                $categorie->evenement_id = $evenement['id'];
+                $categorie->nom_categorie = $this->request->data['nom_categorie'];
+                $categorie->slug_categorie = $this->request->data['slug_categorie'];
+                $categorieTable->save($categorie);
+                //Maintenant Option
+                $option->categorie_id = $categorie['id'];
+                $option->nom_option = $this->request->data['nom_option'];
+                $option->slug_option = $this->request->data['slug_option'];
+                $option->prix_unitaire = $this->request->data['prix_unitaire'];
+                $option->quantite_minimum = $this->request->data['quantite_minimum'];
+                $option->quantite_maximum = $this->request->data['quantite_maximum'];
+                $optionTable->save($option);
 
                 $this->Flash->success(__('The evenement has been saved.'));
 

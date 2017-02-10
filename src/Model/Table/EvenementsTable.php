@@ -123,7 +123,7 @@ class EvenementsTable extends Table
             ->notEmpty('date_fin');
 
         $validator
-            ->integer('evenement_active')
+            ->boolean('evenement_active')
             ->requirePresence('evenement_active', 'create')
             ->notEmpty('evenement_active');
 

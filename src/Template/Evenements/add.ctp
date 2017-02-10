@@ -16,23 +16,79 @@
     <?= $this->Form->create($evenement) ?>
     <fieldset>
         <legend><?= __('Add Evenement') ?></legend>
+        <div class="row">
         <?php
+            echo "<div class=\"col-xs-4\">";
             echo $this->Form->input('nom_evenement');
+            echo "</div>";
+        echo "<div class=\"col-xs-4\">";
             echo $this->Form->input('slug_evenement');
+        echo "</div>";
+        echo "</div>";
+
             echo $this->Form->input('description');
             echo $this->Form->input('adresse');
+        echo "<div class=\"row\">";
+        echo "<div class=\"col-xs-5\">";
             echo $this->Form->input('remise');
+        echo "</div>";
+        echo "<div class=\"col-xs-5\">";
             echo $this->Form->input('date_remise');
+        echo "</div>";
+        echo "<div class=\"col-xs-5\">";
             echo $this->Form->input('date_soumission_debut');
+        echo "</div>";
+        echo "<div class=\"col-xs-5\">";
             echo $this->Form->input('date_soumission_fin');
+        echo "</div>";
+        echo "<div class=\"col-xs-5\">";
             echo $this->Form->input('date_acceptation');
+        echo "</div>";
+        echo "<div class=\"col-xs-5\">";
             echo $this->Form->input('date_acceptation_definitive');
+        echo "</div>";
+        echo "<div class=\"col-xs-5\">";
             echo $this->Form->input('date_debut');
+        echo "</div>";
+        echo "<div class=\"col-xs-5\">";
             echo $this->Form->input('date_fin');
-            echo $this->Form->input('evenement_active');
+        echo "</div>";
+        echo "<div class=\"col-xs-3\">";
+        echo $this->Form->input('evenement_active', ['type'=>'checkbox']);
+        echo "</div>";
+        echo "<div class=\"col-xs-3\">";
             echo $this->Form->input('nombre_page_accepte');
+        echo "</div>";
+        echo "<div class=\"col-xs-3\">";
             echo $this->Form->input('prix_unitaire_extra_page');
+        echo "</div>";
+        echo "<div class=\"col-xs-5\">";
+        echo $this->Form->input('nom_categorie');
+        echo "</div>";
+        echo "<div class=\"col-xs-5\">";
+        echo $this->Form->input('slug_categorie');
+        echo "</div>";
+        echo "<div class=\"col-xs-5\">";
+        echo $this->Form->input('nom_option');
+        echo "</div>";
+        echo "<div class=\"col-xs-5\">";
+        echo $this->Form->input('slug_option');
+        echo "</div>";
+        echo "<div class=\"col-xs-5\">";
+        echo $this->Form->input('prix_unitaire');
+        echo "</div>";
+        echo "<div class=\"col-xs-5\">";
+        echo $this->Form->input('quantite_minimum');
+        echo "</div>";
+        echo "<div class=\"col-xs-5\">";
+        echo $this->Form->input('quantite_maximum');
+        echo "</div>";
+        echo "<div class=\"col-xs-5\">";
+        echo $this->Form->input('url_evenement', ['type'=>'file','label'=>'Image']);
+        echo "</div>";
         ?>
+            <div></div>
+
     </fieldset>
     <?= $this->Form->button(__('Enregistrer')) ?>
     <?= $this->Form->end() ?>

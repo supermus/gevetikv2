@@ -19,7 +19,7 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\Time $date_acceptation_definitive
  * @property \Cake\I18n\Time $date_debut
  * @property \Cake\I18n\Time $date_fin
- * @property int $evenement_active
+ * @property boolean $evenement_active
  * @property int $nombre_page_accepte
  * @property int $prix_unitaire_extra_page
  *

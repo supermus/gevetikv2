@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use Cake\ORM\TableRegistry;
 /**
  * Reservations Controller
  *
@@ -67,7 +67,27 @@ class ReservationsController extends AppController
         $this->set(compact('reservation', 'evenements', 'participants'));
         $this->set('_serialize', ['reservation']);
     }
+    public function addReservationAndParticipant($id)
+    {
+        $participantTable = TableRegistry::get('Participants');
+        $participant = $participantTable->newEntity();
+        $participant->prenom_participant = $this->request->session()->read('Auth.User.prenom');
+        $participant->nom_participant = $this->request->session()->read('Auth.User.nom');
+        $participant->email_participant = $this->request->session()->read('Auth.User.email');
+        $participantTable->save($participant);
 
+        $reservationTable = TableRegistry::get('Reservations');
+        $reservation = $reservationTable->newEntity();
+
+        $reservation->evenement_id = $id;
+        $reservation->participant_id = $participant->id;
+        $reservationTable->save($reservation);
+
+
+        $this->Flash->success(__('La reservation est bien enregistré.'));
+
+        return $this->redirect(['action' => 'index']);
+    }
     /**
      * Edit method
      *

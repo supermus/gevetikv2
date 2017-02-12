@@ -50,9 +50,9 @@ class ReservationsTable extends Table
             'foreignKey' => 'participant_id',
             'joinType' => 'INNER'
         ]);
-        /*$this->hasMany('Paiement', [
+        $this->hasMany('Paiements', [
             'foreignKey' => 'reservation_id'
-        ]);*/
+        ]);
     }
 
     /**
@@ -80,7 +80,7 @@ class ReservationsTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['evenement_id'], 'Evenements'));
-        $rules->add($rules->existsIn(['paiement_id'], 'Paiement'));
+        $rules->add($rules->existsIn(['paiement_id'], 'Paiements'));
         $rules->add($rules->existsIn(['participant_id'], 'Participants'));
 
         return $rules;

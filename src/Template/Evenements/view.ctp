@@ -35,7 +35,7 @@
         <div class="media-body">
             <?php echo $this->Html->link(
                 'Je réserve',
-                ['controller' => 'reservation', 'action' => 'add',$evenement->id]
+                ['controller' => 'reservations', 'action' => 'addReservationAndParticipant',$evenement->id]
                 ,['class'=>'btn btn-primary','style'=>'float: right;']
             );
             ?>

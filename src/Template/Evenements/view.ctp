@@ -27,18 +27,27 @@
             <label class="label label-info">Date de fin : </label>&nbsp;
             <span class="label label-info"><?= h($evenement->date_fin)?></span><br>
             <label class="label label-info">Prix de base : </label>&nbsp;
-            <span class="label label-info"><?= h($prixUnitaire)?></span>&nbsp;
+            <span class="label label-info"><?= h($prixUnitaire.'€')?></span>&nbsp;
             <label class="label label-info">Prix aprés remise : </label>&nbsp;
-            <span class="label label-info"><?= h($prixTotale)?></span>
+            <span class="label label-info"><?= h($prixTotale.'€')?></span>
         </div>
         <div class="clearfix"></div>
         <div class="media-body">
-            <?php echo $this->Html->link(
+            <?php if ($reservationexist->count() == 0):
+              echo $this->Html->link(
                 'Je réserve',
                 ['controller' => 'reservations', 'action' => 'addReservationAndParticipant',$evenement->id]
                 ,['class'=>'btn btn-primary','style'=>'float: right;']
             );
             ?>
+            <?php else: echo $this->Html->link(
+                'Payer : '.$prixTotale.'€',
+                ['controller' => 'paiements', 'action' => 'add',$reservationexist->first()->id]
+                ,['class'=>'btn btn-info ','style'=>'float: right;']
+            );
+            ?>
+
+            <?php endif ?>
         </div>
     </div>
 </div>

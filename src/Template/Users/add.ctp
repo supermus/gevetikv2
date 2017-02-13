@@ -17,7 +17,7 @@
         <?php
             echo $this->Form->input('username',['label'=>'Nom d\'utilisateur']);
             echo $this->Form->input('email',['label'=>'Email']);
-            //echo $this->Form->input('password');
+            echo $this->Form->input('password');
             echo $this->Form->input('nom',['label'=>'Nom']);
             echo $this->Form->input('prenom',['label'=>'Prenom']);
             echo $this->Form->input('datedenaissance',['minYear'=>date('Y')-70, 'maxYear'=>date('Y'),'label'=>'Date de naissance']);

@@ -19,12 +19,29 @@ class ReservationsController extends AppController
      */
     public function index()
     {
-        $conn = ConnectionManager::get('default');
-    $evenements = $conn->execute('SELECT * FROM Reservations, Evenements 
-          WHERE Reservations.participant_id = 11 
+        $usersTable = TableRegistry::get('Users');
+        $usersParticipant = TableRegistry::get('Participants');
+        $leUser = $usersTable->find()->where(['id' => $this->request->session()->read('Auth.User.id')]);
+
+        $participant = $usersParticipant->find()->where(['email_participant' => $leUser->first()->email]);
+        $par = $participant->count();
+
+        if( $par == 0)
+        {
+            $this->Flash->error(__('Aucune reservation.'));
+            return $this->redirect(['controller'=>'evenements','action' => 'index']);
+        }
+        else
+        {
+            $conn = ConnectionManager::get('default');
+            $evenements = $conn->execute('SELECT * FROM Reservations, Evenements 
+          WHERE participant_id ='.$participant->first()->id.' 
           AND Evenements.id = Reservations.evenement_id');
 
-        $this->set('evenements', $evenements);
+            $this->set('evenements', $evenements);
+        }
+
+
     }
 
     /**

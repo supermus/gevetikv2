@@ -48,7 +48,6 @@ class EvenementsController extends AppController
         ]);
 
 
-
         $queryCategorieById = $this->Evenements->Categories->find('all')->where(['evenement_id'=>$id]);
         $options = TableRegistry::get('Options');
         $queryOptionPrix = $options->find()->Where(['categorie_id'=>$queryCategorieById->first()->id]);
@@ -66,15 +65,26 @@ class EvenementsController extends AppController
 
         
         $participant = $usersParticipant->find()->where(['email_participant' => $leUser->first()->email]);
-
-
-
-        if($participant->count()>0) {
-
+        if ($participant->count() == 0)
+        {
+            $reservationExist = -1;
+            $this->set('reservationExist',$reservationExist);
+        }
+        else
+        {
             $reservationExist = $reservationTable->find()->where(['evenement_id' => $id])
                 ->andWhere(['participant_id' => $participant->first()->id]);
+            $reservationExist=$reservationExist->first()->id;
+//            if($reservationExist==$id){
+//                $this->set('reservationExist',$reservationExist);
+//            }
+//            else
+//            {
+//                $reservationExist = -1;
+//                $this->set('reservationExist',$reservationExist);
+//            }
+
         }
-        $this->set('reservationexist',$reservationExist);
 
 
         $this->set('evenement', $evenement);
@@ -98,6 +108,12 @@ class EvenementsController extends AppController
         $optionTable = TableRegistry::get('Options');
         $option = $optionTable->newEntity();
 
+        $usersTable = TableRegistry::get('Users');
+        $usersParticipant = TableRegistry::get('Participants');
+        $leUser = $usersTable->find()->where(['id' => $this->request->session()->read('Auth.User.id')]);
+
+        $participant = $usersParticipant->find()->where(['email_participant' => $leUser->first()->email]);
+        $par = $participant->count();
         $evenement = $this->Evenements->newEntity();
 
         if ($this->request->is('post')) {
@@ -105,14 +121,29 @@ class EvenementsController extends AppController
 
             if ($this->Evenements->save($evenement)) {
                 //mettre les infos dans organisateur et enregistrer dans la table organisateur
+                if( $par == 0)
+                {
+                    $newParticipant = $usersParticipant->newEntity();
+                    $newParticipant->nom_participant = $leUser->first()->nom;
+                    $newParticipant->prenom_participant = $leUser->first()->prenom;
+                    $newParticipant->email_participant = $leUser->first()->email;
+                    $usersParticipant->save($newParticipant);
+                    $organisateur->participant_id =  $newParticipant->id;
+                }
+                else
+                {
+                    $organisateur->participant_id = $participant->id;
+                }
                 $organisateur->evenement_id = $evenement['id'];
-                $organisateur->participant_id =  $this->request->session()->read('Auth.User.id');
-                $organisateur->role =  $this->request->session()->read('Auth.User.role');
+                $organisateur->nom_role =  "organisateur";
                 if($this->request->session()->read('Auth.User.role') == 'organisateur')
                 {
                     $organisateur->est_organisateur = true;
                 }
+
+
                 $organisateurTable->save($organisateur);
+
                 //Maintenant pour categorie
                 $categorie->evenement_id = $evenement['id'];
                 $categorie->nom_categorie = $this->request->data['nom_categorie'];
@@ -127,7 +158,9 @@ class EvenementsController extends AppController
                 $option->quantite_maximum = $this->request->data['quantite_maximum'];
                 $optionTable->save($option);
 
-                $this->Flash->success(__('The evenement has been saved.'));
+
+
+                $this->Flash->success(__('L\'evenement est bien enregistré.'));
 
                 return $this->redirect(['action' => 'index']);
             } else {

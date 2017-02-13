@@ -47,6 +47,8 @@ class EvenementsController extends AppController
             'contain' => []
         ]);
 
+
+
         $queryCategorieById = $this->Evenements->Categories->find('all')->where(['evenement_id'=>$id]);
         $options = TableRegistry::get('Options');
         $queryOptionPrix = $options->find()->Where(['categorie_id'=>$queryCategorieById->first()->id]);
@@ -57,7 +59,22 @@ class EvenementsController extends AppController
         $this->set('prixTotale', $queryPixTotale);
 
 
+        $reservationTable = TableRegistry::get('Reservations');
+        $usersTable = TableRegistry::get('Users');
+        $usersParticipant = TableRegistry::get('Participants');
+        $leUser = $usersTable->find()->where(['id' => $this->request->session()->read('Auth.User.id')]);
 
+        
+        $participant = $usersParticipant->find()->where(['email_participant' => $leUser->first()->email]);
+
+
+
+        if($participant->count()>0) {
+
+            $reservationExist = $reservationTable->find()->where(['evenement_id' => $id])
+                ->andWhere(['participant_id' => $participant->first()->id]);
+        }
+        $this->set('reservationexist',$reservationExist);
 
 
         $this->set('evenement', $evenement);

@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
+use Cake\Datasource\ConnectionManager;
 /**
  * Reservations Controller
  *
@@ -18,13 +19,12 @@ class ReservationsController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
-            'contain' => ['Evenements', 'Participants']
-        ];
-        $reservations = $this->paginate($this->Reservations);
+        $conn = ConnectionManager::get('default');
+    $evenements = $conn->execute('SELECT * FROM Reservations, Evenements 
+          WHERE Reservations.participant_id = 11 
+          AND Evenements.id = Reservations.evenement_id');
 
-        $this->set(compact('reservations'));
-        $this->set('_serialize', ['reservations']);
+        $this->set('evenements', $evenements);
     }
 
     /**

@@ -134,6 +134,9 @@ class UsersController extends AppController
                 if($user['role'] == 'visiteur'){
                     return $this->redirect(['controller'=>'pages']);
                 }
+                if($user['role'] == 'organisateur'){
+                    return $this->redirect(['controller'=>'evenements']);
+                }
                 /// Ajouter les autres roles avec les bonnes redirections
             }
             //mauvais login

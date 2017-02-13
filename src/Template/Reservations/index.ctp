@@ -1,49 +1,50 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Reservation'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Evenements'), ['controller' => 'Evenements', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Evenement'), ['controller' => 'Evenements', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Participants'), ['controller' => 'Participants', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Participant'), ['controller' => 'Participants', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Paiement'), ['controller' => 'Paiement', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Paiement'), ['controller' => 'Paiement', 'action' => 'add']) ?></li>
+<div class="col-md-1 sidebar">
+    <ul class="nav nav-sidebar">
+
+
+
     </ul>
-</nav>
-<div class="reservations index large-9 medium-8 columns content">
-    <h3><?= __('Reservations') ?></h3>
-    <table cellpadding="0" cellspacing="0">
-        <thead>
-            <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('evenement_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('paiement_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('participant_id') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($reservations as $reservation): ?>
-            <tr>
-                <td><?= $this->Number->format($reservation->id) ?></td>
-                <td><?= $reservation->has('evenement') ? $this->Html->link($reservation->evenement->id, ['controller' => 'Evenements', 'action' => 'view', $reservation->evenement->id]) : '' ?></td>
-                <td><?= $this->Number->format($reservation->paiement_id) ?></td>
-                <td><?= $reservation->has('participant') ? $this->Html->link($reservation->participant->id, ['controller' => 'Participants', 'action' => 'view', $reservation->participant->id]) : '' ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $reservation->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $reservation->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $reservation->id], ['confirm' => __('Are you sure you want to delete # {0}?', $reservation->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-        </ul>
-        <p><?= $this->Paginator->counter() ?></p>
-    </div>
 </div>
+<div class="col-md-6 col-md-offset-1">
+    <br>
+    <?php $evenementsici = $evenements->fetchAll('assoc'); ?>
+
+    <?php foreach ($evenementsici as $evenement): ?>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <?php echo $this->Html->link($evenement['nom_evenement'], ['controller' => 'evenements', 'action' => 'view', $evenement['id']]); ?>
+                <div class="btn-group" style="float:right;">
+                    <?php echo $this->Html->link(
+                        'Lire la suite',
+                        ['controller' => 'evenements', 'action' => 'view',$evenement['id']]
+                        ,['class'=>'btn btn-danger']
+                    );
+                    ?>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+                <div class="media">
+                    <div class="media-left">
+                        <?php echo $this->Html->image($evenement['url_evenement'], [
+                            "alt" => $evenement['url_evenement'],
+                            'url' => ['controller' => 'evenements', 'action' => 'view', $evenement['id']]
+                        ]); ?>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading"><?php echo $evenement['description'] ?></h4>
+                        <label class="label label-warning">Adresse : </label>&nbsp;
+                        <span class="label label-warning"><?= h($evenement['adresse'])?></span><br>
+                        <label class="label label-info">Date de début : </label>&nbsp;
+                        <span class="label label-info"><?= h($evenement['date_debut'])?></span>&nbsp;
+                        <label class="label label-info">Date de fin : </label>&nbsp;
+                        <span class="label label-info"><?= h($evenement['date_fin'])?></span>
+                        <div class="clearfix"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <?php endforeach; ?>

@@ -4,8 +4,6 @@
   }
 </style>
 <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
-  <!-- Overlay -->
-  <div class="overlay"></div>
 
   <!-- Indicators -->
   <ol class="carousel-indicators">

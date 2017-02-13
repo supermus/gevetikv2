@@ -33,7 +33,8 @@
         </div>
         <div class="clearfix"></div>
         <div class="media-body">
-            <?php if ($reservationexist->count() == 0):
+
+            <?php if ($reservationExist== -1):
               echo $this->Html->link(
                 'Je réserve',
                 ['controller' => 'reservations', 'action' => 'addReservationAndParticipant',$evenement->id]
@@ -42,7 +43,7 @@
             ?>
             <?php else: echo $this->Html->link(
                 'Payer : '.$prixTotale.'€',
-                ['controller' => 'paiements', 'action' => 'add',$reservationexist->first()->id]
+                ['controller' => 'Paiements', 'action' => 'add',$reservationExist]
                 ,['class'=>'btn btn-info ','style'=>'float: right;']
             );
             ?>

@@ -36,17 +36,11 @@ $user = $this->Session->read('Auth.User');
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
-    
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
     <nav class ="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <!--<ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?/*= $this->fetch('title') */?></a></h1>
-            </li>
-        </ul>-->
+
         <div class="navbar-header">
             <?= $this->Html->Link('Gevetik',['controller'=>'pages','action'=>'home'],['class'=>'navbar-brand']); ?>
         </div>
@@ -70,17 +64,18 @@ $user = $this->Session->read('Auth.User');
                             <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
                             <li><?= $this->Html->Link('Conférences',['controller'=>'evenements','action'=>'index']); ?></li>
                             <li><?= $this->Html->Link('Contact',['controller'=>'pages','action'=>'contact']); ?></li>
-                            <li><?= $this->Html->Link('Profil',['controller'=>'users','action'=>'logout']); ?></li>
+                            <li><?= $this->Html->Link('Mon profil',['controller'=>'users','action'=>'view',$user['id']]); ?></li>
                 <?php
                             break;
-                        case 'oragnisateur':
+                        case 'organisateur':
                             ?>
                             <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
                             <li><?= $this->Html->Link('Conférences',['controller'=>'evenements','action'=>'index']); ?></li>
-                            <li><?= $this->Html->Link('Reservations',['controller'=>'users','action'=>'logout']); ?></li>
+                            <li><?= $this->Html->Link('Reservations',['controller'=>'reservations','action'=>'index']); ?></li>
+                            <li><?= $this->Html->Link('Mon profil',['controller'=>'users','action'=>'view',$user['id']]); ?></li>
                             <li><?= $this->Html->Link('Contact',['controller'=>'pages','action'=>'contact']); ?></li>
-                            <li><?= $this->Html->Link('Profil',['controller'=>'users','action'=>'logout']); ?></li>
                 <?php
+                            break;
                         default:
                             ?>
                             <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>

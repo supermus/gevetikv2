@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 10, 2017 at 11:20 PM
+-- Generation Time: Feb 13, 2017 at 06:50 PM
 -- Server version: 5.7.9
 -- PHP Version: 5.6.16
 
@@ -140,7 +140,7 @@ CREATE TABLE IF NOT EXISTS `options` (
 --
 
 INSERT INTO `options` (`id`, `categorie_id`, `nom_option`, `slug_option`, `prix_unitaire`, `quantite_minimum`, `quantite_maximum`) VALUES
-(1, 1, 'option1', 'option1', 4.00, 1, 4),
+(1, 1, 'option1', 'option1', 4.12, 1, 4),
 (2, 2, 'option2', 'option2', 10.00, 1, 4),
 (3, 4, 'testoption', 'testoption', 5.00, 1, 1),
 (4, 5, 'testimage', 'testimage', 2.00, 1, 1);
@@ -201,11 +201,11 @@ CREATE TABLE IF NOT EXISTS `page_payee` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `paiement`
+-- Table structure for table `paiements`
 --
 
-DROP TABLE IF EXISTS `paiement`;
-CREATE TABLE IF NOT EXISTS `paiement` (
+DROP TABLE IF EXISTS `paiements`;
+CREATE TABLE IF NOT EXISTS `paiements` (
   `paiement_id` int(10) NOT NULL AUTO_INCREMENT,
   `reference_paiement` varchar(50) NOT NULL,
   `page_payee_id` int(10) NOT NULL DEFAULT '0',
@@ -219,10 +219,10 @@ CREATE TABLE IF NOT EXISTS `paiement` (
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `paiement`
+-- Dumping data for table `paiements`
 --
 
-INSERT INTO `paiement` (`paiement_id`, `reference_paiement`, `page_payee_id`, `reservation_id`, `type`, `validation`, `total`, `valide_par`) VALUES
+INSERT INTO `paiements` (`paiement_id`, `reference_paiement`, `page_payee_id`, `reservation_id`, `type`, `validation`, `total`, `valide_par`) VALUES
 (1, 'reference1', 1, 0, 'CB', 1, 300.00, 0),
 (2, 'reference2', 2, 0, 'CB', 1, 500.00, 0),
 (3, 'reference3', 3, 0, 'Cheque', 0, 600.00, 0),
@@ -243,11 +243,11 @@ CREATE TABLE IF NOT EXISTS `participants` (
   `prenom_participant` varchar(50) NOT NULL,
   `nom_participant` varchar(50) NOT NULL,
   `email_participant` varchar(100) NOT NULL,
-  `mot_de_passe` varchar(50) NOT NULL,
-  `etablissement` varchar(250) NOT NULL DEFAULT '',
+  `mot_de_passe` varchar(50) DEFAULT NULL,
+  `etablissement` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique` (`email_participant`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `participants`
@@ -259,7 +259,8 @@ INSERT INTO `participants` (`id`, `prenom_participant`, `nom_participant`, `emai
 (3, 'participant3', 'NOMP3', 'p3@mail.fr', 'pass3', ''),
 (4, 'participant4', 'NOMP4', 'p4@mail.fr', 'pass4', ''),
 (5, 'participant5', 'NOMP5', 'p5@mail.fr', 'pass5', ''),
-(6, 'participant6', 'NOMP6', 'p6@mail.fr', 'pass6', '');
+(6, 'participant6', 'NOMP6', 'p6@mail.fr', 'pass6', ''),
+(11, 'istrateur', 'admin', 'gevetik@gmail.com', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -271,13 +272,20 @@ DROP TABLE IF EXISTS `reservations`;
 CREATE TABLE IF NOT EXISTS `reservations` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `evenement_id` int(10) NOT NULL,
-  `paiement_id` int(10) NOT NULL,
+  `paiement_id` int(10) DEFAULT NULL,
   `participant_id` int(10) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique` (`evenement_id`,`participant_id`,`paiement_id`),
   KEY `FK_paiement_reservation` (`paiement_id`),
   KEY `FK_participant_reservation` (`participant_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `reservations`
+--
+
+INSERT INTO `reservations` (`id`, `evenement_id`, `paiement_id`, `participant_id`) VALUES
+(1, 1, NULL, 11);
 
 -- --------------------------------------------------------
 
@@ -300,7 +308,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `hashval` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
@@ -310,7 +318,8 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `nom`, `prenom`, `da
 (7, 'admin', 'gevetik@gmail.com', '$2y$10$fSptILFpTkviGxYMjAGEzeXNMFMjpcu4Dixz683uaDHxWou58SuHC', 'admin', 'istrateur', '2017-01-13', 'admin', '', '', ''),
 (21, 'visiteur', 'visiteur@visiteur.visiteur', '$2y$10$np0PB19I5WKFUifdHrRBZep3xM0AlA1XIBSZo0j51sFw8Y/Bm1xkC', 'visiteur', 'visiteur', '2017-01-13', 'visiteur', 'visiteur', '', ''),
 (56, 'gevetik', 'el-madi@live.fr', '$2y$10$7PbWwaZ/sS8EwRFvze.bKuSoTdhUN1hGCzmrmeTCiQKwPWL5Iy.Va', 'ELMADI', 'MUSTAPHA', '2017-01-18', 'visiteur', '7 RUE DE LA CLAIRIERE APPRT 716', '26620bc0e2df9dfc838780238666c87cae7503cd', '9ef0079401f4032c2de24a3b347715c960bc8228'),
-(57, 'abdel', 'abdelnaji91@gmail.com', '$2y$10$h5sUF37F0Be7HL8MumNyW.K3Okh5Pu0QlHy/IETZo7.hDq5FGT91K', 'abdel', 'abdel', '2017-01-18', 'visiteur', 'abdel', NULL, NULL);
+(57, 'abdel', 'abdelnaji91@gmail.com', '$2y$10$h5sUF37F0Be7HL8MumNyW.K3Okh5Pu0QlHy/IETZo7.hDq5FGT91K', 'abdel', 'abdel', '2017-01-18', 'visiteur', 'abdel', NULL, NULL),
+(58, 'organisateur', 'organisateur@organisateur.fr', '$2y$10$fsXASeWRDDgaepOoLVS28OnIvky8Heo1vXcX5vWwwc2GCt1PHxFFu', 'organisateur', 'organisateur', '2000-02-13', 'organisateur', 'organisateur', NULL, NULL);
 
 --
 -- Constraints for dumped tables
@@ -339,7 +348,7 @@ ALTER TABLE `options`
 --
 ALTER TABLE `option_paiement`
   ADD CONSTRAINT `FK_option_option_paiement` FOREIGN KEY (`option_id`) REFERENCES `options` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `FK_paiement_option_paiement` FOREIGN KEY (`paiement_id`) REFERENCES `paiement` (`paiement_id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `FK_paiement_option_paiement` FOREIGN KEY (`paiement_id`) REFERENCES `paiements` (`paiement_id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `organisateurs`
@@ -360,7 +369,7 @@ ALTER TABLE `page_payee`
 --
 ALTER TABLE `reservations`
   ADD CONSTRAINT `FK_evenement_reservation` FOREIGN KEY (`evenement_id`) REFERENCES `evenements` (`id`),
-  ADD CONSTRAINT `FK_paiement_reservation` FOREIGN KEY (`paiement_id`) REFERENCES `paiement` (`paiement_id`),
+  ADD CONSTRAINT `FK_paiement_reservation` FOREIGN KEY (`paiement_id`) REFERENCES `paiements` (`paiement_id`),
   ADD CONSTRAINT `FK_participant_reservation` FOREIGN KEY (`participant_id`) REFERENCES `participants` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

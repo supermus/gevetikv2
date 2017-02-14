@@ -196,6 +196,37 @@ class EvenementsController extends AppController
         $this->set(compact('evenement'));
         $this->set('_serialize', ['evenement']);
     }
+    
+public function mesevenements()
+    {
+        $userT = TableRegistry::get('Users');
+        $participantT = TableRegistry::get('Participants');
+        $organisateurT = TableRegistry::get('Organisateurs');
+        $evenementT = TableRegistry::get('Evenements');
+        $leUser = $userT->find()->where(['id' => $this->request->session()->read('Auth.User.id')]);
+        $participant = $participantT->find()->where(['email_participant' => $leUser->first()->email]);
+        $organisateur = $organisateurT->find()->where(['participant_id' => $participant->first()->id ]);
+        
+        
+       
+        foreach ($organisateur as $row) {
+            $event = $evenementT->find()->where(['id' => $row->evenement_id ]);
+        } $this->set('mesevents', $event);
+        $evenements = $this->paginate($this->Evenements);
+
+        //pour faire le lien entre evenemtn categorie
+        $categories = TableRegistry::get('Categories');
+        $options = TableRegistry::get('Options');
+
+        $query = $options->find('all')
+            ->contain(['Categories.Evenements']);
+        $this->set('categories', $query);
+
+
+
+        $this->set(compact('evenements'));
+        $this->set('_serialize', ['evenements']);
+    }    
 
     /**
      * Delete method

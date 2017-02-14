@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 13, 2017 at 06:50 PM
+-- Generation Time: Feb 13, 2017 at 11:42 PM
 -- Server version: 5.7.9
 -- PHP Version: 5.6.16
 
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique` (`slug_categorie`,`evenement_id`),
   KEY `FK_evemement` (`evenement_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `categories`
@@ -70,10 +70,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
 
 INSERT INTO `categories` (`id`, `evenement_id`, `nom_categorie`, `slug_categorie`) VALUES
 (1, 1, 'categorie1', 'categorie1'),
-(2, 2, 'categorie2', 'categorie2'),
-(3, 25, 'testcateg', 'testcateg'),
-(4, 26, 'testoption', 'testoption'),
-(5, 27, 'testimage', 'testimage');
+(11, 8, 'fzaf', 'fza');
 
 -- --------------------------------------------------------
 
@@ -102,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `evenements` (
   `url_evenement` varchar(255) NOT NULL DEFAULT 'event.jpg',
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique` (`slug_evenement`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `evenements`
@@ -110,10 +107,7 @@ CREATE TABLE IF NOT EXISTS `evenements` (
 
 INSERT INTO `evenements` (`id`, `nom_evenement`, `slug_evenement`, `description`, `adresse`, `remise`, `date_remise`, `date_soumission_debut`, `date_soumission_fin`, `date_acceptation`, `date_acceptation_definitive`, `date_debut`, `date_fin`, `evenement_active`, `nombre_page_accepte`, `prix_unitaire_extra_page`, `url_evenement`) VALUES
 (1, 'evenements', 'evenements', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'ibgbi, 91000 Evry ', 0, '2016-11-02', '2016-11-02', '2016-11-03', '2016-11-01', '2016-11-02', '2016-11-03', '2016-11-04', 0, 0, 10, 'event.jpg'),
-(2, 'BU Party', 'bup', 'ALors c''est le cour de la bu trop stylé ta mere mdr \r\non fais des pe tite blague avec la dame', 'boulvard deepse eeslk qzkl', 3, '2014-02-06', '2015-02-06', '2018-02-06', '2020-02-06', '2019-02-06', '2017-02-06', '2017-02-06', 1, 3, 0, 'event.jpg'),
-(25, 'testcateg', 'testcateg', 'testcateg', 'testcateg', 0, '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', 0, 0, 0, 'event.jpg'),
-(26, 'testoption', 'testoption', 'testoption', 'testoption', 0, '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', 0, 0, 0, 'event.jpg'),
-(27, 'testimage', 'testimage', 'testimage', 'testimage', 0, '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', '2017-02-10', 0, 0, 0, '4.png');
+(8, 'zaifh afzo hz ', 'fsklh ', 'zfaklh azlkfh zaf  alzkfh zaklhf az azlkf hza fklh azfcuibqclk qzcl zkn zfq bizqub qf qnf. fzkjlh fskj fhzkjqzfkj bqzkf apkf jbafkpbuf qzpk bqjz qz pujzqbfqzp z qpfjbpqzfbqzp jbzqfpjb? sefkj ne ef jksn esjk ebsnk.', 'izfj o zaf oij azf  oizJOIFJ oifjziofj', 0, '2017-02-13', '2017-02-13', '2017-02-13', '2017-02-13', '2017-02-13', '2017-02-13', '2017-02-13', 0, 0, 0, 'event.jpg');
 
 -- --------------------------------------------------------
 
@@ -133,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `options` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique` (`slug_option`,`categorie_id`),
   KEY `FK_categorie` (`categorie_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `options`
@@ -141,9 +135,7 @@ CREATE TABLE IF NOT EXISTS `options` (
 
 INSERT INTO `options` (`id`, `categorie_id`, `nom_option`, `slug_option`, `prix_unitaire`, `quantite_minimum`, `quantite_maximum`) VALUES
 (1, 1, 'option1', 'option1', 4.12, 1, 4),
-(2, 2, 'option2', 'option2', 10.00, 1, 4),
-(3, 4, 'testoption', 'testoption', 5.00, 1, 1),
-(4, 5, 'testimage', 'testimage', 2.00, 1, 1);
+(9, 11, 'zafqq', 'raza', 120.00, 50, 100);
 
 -- --------------------------------------------------------
 
@@ -178,16 +170,23 @@ CREATE TABLE IF NOT EXISTS `organisateurs` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQUE` (`evenement_id`,`participant_id`),
   KEY `FK_participant_organisateur` (`participant_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `organisateurs`
+--
+
+INSERT INTO `organisateurs` (`id`, `evenement_id`, `participant_id`, `nom_role`, `est_organisateur`) VALUES
+(3, 8, 12, '', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `page_payee`
+-- Table structure for table `page_payees`
 --
 
-DROP TABLE IF EXISTS `page_payee`;
-CREATE TABLE IF NOT EXISTS `page_payee` (
+DROP TABLE IF EXISTS `page_payees`;
+CREATE TABLE IF NOT EXISTS `page_payees` (
   `page_payee_id` int(10) NOT NULL AUTO_INCREMENT,
   `article_id` int(10) NOT NULL,
   `auteur_id` int(10) NOT NULL,
@@ -247,7 +246,7 @@ CREATE TABLE IF NOT EXISTS `participants` (
   `etablissement` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique` (`email_participant`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `participants`
@@ -260,7 +259,8 @@ INSERT INTO `participants` (`id`, `prenom_participant`, `nom_participant`, `emai
 (4, 'participant4', 'NOMP4', 'p4@mail.fr', 'pass4', ''),
 (5, 'participant5', 'NOMP5', 'p5@mail.fr', 'pass5', ''),
 (6, 'participant6', 'NOMP6', 'p6@mail.fr', 'pass6', ''),
-(11, 'istrateur', 'admin', 'gevetik@gmail.com', NULL, NULL);
+(11, 'istrateur', 'admin', 'gevetik@gmail.com', NULL, NULL),
+(12, 'organisateur', 'organisateur', 'organisateur@organisateur.fr', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -358,9 +358,9 @@ ALTER TABLE `organisateurs`
   ADD CONSTRAINT `FK_participant_organisateur` FOREIGN KEY (`participant_id`) REFERENCES `participants` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `page_payee`
+-- Constraints for table `page_payees`
 --
-ALTER TABLE `page_payee`
+ALTER TABLE `page_payees`
   ADD CONSTRAINT `FK_article_page_payee` FOREIGN KEY (`article_id`) REFERENCES `articles` (`id`),
   ADD CONSTRAINT `FK_auteur_page_payee` FOREIGN KEY (`auteur_id`) REFERENCES `participants` (`id`);
 

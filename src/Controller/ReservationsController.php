@@ -86,24 +86,30 @@ class ReservationsController extends AppController
     }
     public function addReservationAndParticipant($id)
     {
-        $participantTable = TableRegistry::get('Participants');
-        $participant = $participantTable->newEntity();
-        $participant->prenom_participant = $this->request->session()->read('Auth.User.prenom');
-        $participant->nom_participant = $this->request->session()->read('Auth.User.nom');
-        $participant->email_participant = $this->request->session()->read('Auth.User.email');
-        $participantTable->save($participant);
+        $usersTable = TableRegistry::get('Users');
+        $usersParticipant = TableRegistry::get('Participants');
 
-        $reservationTable = TableRegistry::get('Reservations');
-        $reservation = $reservationTable->newEntity();
+        $leUser = $usersTable->find()->where(['id' => $this->request->session()->read('Auth.User.id')]);
 
-        $reservation->evenement_id = $id;
-        $reservation->participant_id = $participant->id;
-        $reservationTable->save($reservation);
+        $participant = $usersParticipant->find()->where(['email_participant' => $leUser->first()->email]);
+        
+        if($participant->count() == 0)
+        {
+            $participant = $usersParticipant->newEntity();
+            $participant->nom_participant = $leUser->first()->nom;
+            $participant->prenom_participant = $leUser->first()->prenom;
+            $participant->email_participant = $leUser->first()->email;
+            $usersParticipant->save($participant);
+        }
 
+            $reservationTable = TableRegistry::get('Reservations');
+            $reservation = $reservationTable->newEntity();
+            $reservation->evenement_id = $id;
+            $reservation->participant_id = $participant->first()->id;
+            $reservationTable->save($reservation);
+            $this->Flash->success(__('La reservation est bien enregistré.'));
+            return $this->redirect(['action' => 'index']);
 
-        $this->Flash->success(__('La reservation est bien enregistré.'));
-
-        return $this->redirect(['action' => 'index']);
     }
     /**
      * Edit method

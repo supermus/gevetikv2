@@ -33,22 +33,21 @@
         </div>
         <div class="clearfix"></div>
         <div class="media-body">
-
-            <?php if ($reservationExist== -1):
+            <?php if ($reservationExist1 == false ):
               echo $this->Html->link(
                 'Je réserve',
                 ['controller' => 'reservations', 'action' => 'addReservationAndParticipant',$evenement->id]
                 ,['class'=>'btn btn-primary','style'=>'float: right;']
             );
             ?>
-            <?php else: echo $this->Html->link(
-                'Payer : '.$prixTotale.'€',
-                ['controller' => 'Paiements', 'action' => 'add',$reservationExist]
+            <?php elseif($reservationExist1 == true):
+                echo $this->Html->link('Payer : '.$prixTotale.'€',
+                ['controller' => 'Paiements', 'action' => 'add',$reservationExist11->first()->id]
                 ,['class'=>'btn btn-info ','style'=>'float: right;']
             );
             ?>
 
-            <?php endif ?>
+            <?php endif; ?>
         </div>
     </div>
 </div>

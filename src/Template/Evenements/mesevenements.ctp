@@ -1,9 +1,16 @@
 <div class="col-md-6 col-md-offset-1">
     <br>
+    <?php
+    for($i=0 ; $i < count($mesevents) ;$i++)
+    {
+        echo $mesevents[$i]->first()->nom_evenement;
+    }
+    die;
+        ?>
     <?php foreach ($mesevents as $evenement): ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <?php echo $this->Html->link($evenement->nom_evenement, ['controller' => 'evenements', 'action' => 'view', $evenement->id]); ?>
+            <?php echo $this->Html->link($evenement, ['controller' => 'evenements', 'action' => 'view', $evenement->id]); ?>
             <div class="btn-group" style="float:right;">
                 <?php echo $this->Html->link(
                 'Lire la suite',
@@ -40,12 +47,4 @@
 
     <?php endforeach; ?>
 
-    <div class="paginator text-center">
-        <ul class="pagination">
-            <?= $this->Paginator->prev('< ' . __('Précedent')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('Suivant') . ' >') ?>
-        </ul>
-        <p><?= $this->Paginator->counter() ?></p>
-    </div>
 </div>

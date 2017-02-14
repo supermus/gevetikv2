@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use App\Model\Entity\Evenement;
 use Cake\ORM\TableRegistry;
 /**
  * Evenements Controller
@@ -65,16 +66,28 @@ class EvenementsController extends AppController
 
         
         $participant = $usersParticipant->find()->where(['email_participant' => $leUser->first()->email]);
+        //debug($participant->count());die;
         if ($participant->count() == 0)
         {
-            $reservationExist = -1;
-            $this->set('reservationExist',$reservationExist);
+            $participantExiste = -1;
+            $this->set('participantExist',$participantExiste);
         }
         else
         {
-            $reservationExist = $reservationTable->find()->where(['evenement_id' => $id])
+            $reservationExist1 = $reservationTable->find()->where(['evenement_id' => $id])
                 ->andWhere(['participant_id' => $participant->first()->id]);
-            $reservationExist=$reservationExist->first()->id;
+
+            if($reservationExist1->count() == 0)
+            {
+                $this->set('reservationExist1',false);
+            }
+            else
+            {
+                $this->set('reservationExist1',true);
+                $this->set('reservationExist11',$reservationExist1);
+            }
+
+
 //            if($reservationExist==$id){
 //                $this->set('reservationExist',$reservationExist);
 //            }
@@ -206,22 +219,16 @@ public function mesevenements()
         $leUser = $userT->find()->where(['id' => $this->request->session()->read('Auth.User.id')]);
         $participant = $participantT->find()->where(['email_participant' => $leUser->first()->email]);
         $organisateur = $organisateurT->find()->where(['participant_id' => $participant->first()->id ]);
-        
-        
-       
-        foreach ($organisateur as $row) {
-            $event = $evenementT->find()->where(['id' => $row->evenement_id ]);
-        } $this->set('mesevents', $event);
-        $evenements = $this->paginate($this->Evenements);
 
-        //pour faire le lien entre evenemtn categorie
-        $categories = TableRegistry::get('Categories');
-        $options = TableRegistry::get('Options');
 
-        $query = $options->find('all')
-            ->contain(['Categories.Evenements']);
-        $this->set('categories', $query);
+        $event = array();
+        foreach ($organisateur as $row)
+        {
+            $event[] = $evenementT->find()->where(['id' => $row->evenement_id ]);
 
+        }
+        $this->set('mesevents', $event);
+        //$evenements = $this->paginate($this->Evenements);
 
 
         $this->set(compact('evenements'));

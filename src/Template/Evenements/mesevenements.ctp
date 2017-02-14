@@ -37,16 +37,13 @@
                     <label class="label label-info">Date de début : </label>&nbsp;
                     <span class="label label-info"><?= h($mesevents[$i]->first()->date_debut)?></span>&nbsp;
                     <label class="label label-info">Date de fin : </label>&nbsp;
-                    <span class="label label-info"><?= h($mesevents[$i]->first()->date_fin)?></span>
+                    <span class="label label-info"><?= h($mesevents[$i]->first()->date_fin)?> </span>
                     <div class="clearfix"></div>
+                    
 
                 </div>
             </div>
         </div>
-    </div>
+    </div><?php } if($i===0){ echo "<br> <h3>Vous n'avez pas créé d'évenement.</h3>";} ?>
 </div>
-    <?php
-       $i++;
-    }
-        ?>
 

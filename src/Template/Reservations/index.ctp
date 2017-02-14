@@ -47,4 +47,4 @@
             </div>
         </div>
 
-    <?php endforeach; ?>
+    <?php endforeach; if(count($evenements)===0){ echo "<br> <h3>Vous n'avez pas de réservation.</h3>";} ?>

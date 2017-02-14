@@ -126,15 +126,15 @@ class EvenementsController extends AppController
         $leUser = $usersTable->find()->where(['id' => $this->request->session()->read('Auth.User.id')]);
 
         $participant = $usersParticipant->find()->where(['email_participant' => $leUser->first()->email]);
-        $par = $participant->count();
+        //$par = $participant->count();
         $evenement = $this->Evenements->newEntity();
 
         if ($this->request->is('post')) {
             $evenement = $this->Evenements->patchEntity($evenement, $this->request->data);
-
             if ($this->Evenements->save($evenement)) {
+
                 //mettre les infos dans organisateur et enregistrer dans la table organisateur
-                if( $par == 0)
+                if( $participant->count() == 0)
                 {
                     $newParticipant = $usersParticipant->newEntity();
                     $newParticipant->nom_participant = $leUser->first()->nom;
@@ -145,7 +145,7 @@ class EvenementsController extends AppController
                 }
                 else
                 {
-                    $organisateur->participant_id = $participant->id;
+                    $organisateur->participant_id = $participant->first()->id;
                 }
                 $organisateur->evenement_id = $evenement['id'];
                 $organisateur->nom_role =  "organisateur";
@@ -171,13 +171,11 @@ class EvenementsController extends AppController
                 $option->quantite_maximum = $this->request->data['quantite_maximum'];
                 $optionTable->save($option);
 
-
-
                 $this->Flash->success(__('L\'evenement est bien enregistré.'));
 
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error(__('The evenement could not be saved. Please, try again.'));
+                $this->Flash->error(__('L\'evenement n\'est pas enregistré.'));
             }
         }
         $this->set(compact('evenement'));

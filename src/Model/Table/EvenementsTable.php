@@ -123,9 +123,9 @@ class EvenementsTable extends Table
             ->notEmpty('date_fin');
 
         $validator
-            ->boolean('evenement_active')
-            ->requirePresence('evenement_active', 'create')
-            ->notEmpty('evenement_active');
+            ->boolean('evenement_active');
+
+
 
         $validator
             ->integer('nombre_page_accepte')

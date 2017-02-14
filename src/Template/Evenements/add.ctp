@@ -12,7 +12,7 @@
         <li><?= $this->Html->link(__('New Reservation'), ['controller' => 'Reservations', 'action' => 'add']) ?></li>
     </ul>
 </nav>-->
-<div class="col-md-6 col-md-offset-2">
+<div class="col-md-8 col-md-offset-2">
     <?= $this->Form->create($evenement) ?>
     <fieldset>
         <legend><?= __('Add Evenement') ?></legend>

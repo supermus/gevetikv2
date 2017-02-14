@@ -1,8 +1,6 @@
-<div class="col-md-1 sidebar">
+<div class="col-md-2 sidebar">
     <ul class="nav nav-sidebar">
-
-
-
+        <h3>Mes reservations</h3>
     </ul>
 </div>
 <div class="col-md-6 col-md-offset-1">

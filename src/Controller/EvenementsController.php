@@ -71,13 +71,14 @@ class EvenementsController extends AppController
         {
             $participantExiste = -1;
             $this->set('participantExist',$participantExiste);
+            $this->set('reservationExist1',false);
         }
         else
         {
             $reservationExist1 = $reservationTable->find()->where(['evenement_id' => $id])
                 ->andWhere(['participant_id' => $participant->first()->id]);
 
-            if(isset($reservationExist1->count()) == 0)
+            if($reservationExist1->count() == 0)
             {
                 $this->set('reservationExist1',false);
             }

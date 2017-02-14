@@ -101,11 +101,10 @@ class ReservationsController extends AppController
             $participant->email_participant = $leUser->first()->email;
             $usersParticipant->save($participant);
         }
-
             $reservationTable = TableRegistry::get('Reservations');
             $reservation = $reservationTable->newEntity();
             $reservation->evenement_id = $id;
-            $reservation->participant_id = $participant->first()->id;
+            $reservation->participant_id = $participant->id;
             $reservationTable->save($reservation);
             $this->Flash->success(__('La reservation est bien enregistré.'));
             return $this->redirect(['action' => 'index']);

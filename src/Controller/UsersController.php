@@ -132,7 +132,7 @@ class UsersController extends AppController
                     return $this->redirect(['controller'=>'evenements']);
                 }
                 if($user['role'] == 'visiteur'){
-                    return $this->redirect(['controller'=>'pages']);
+                    return $this->redirect(['controller'=>'evenements']);
                 }
                 if($user['role'] == 'organisateur'){
                     return $this->redirect(['controller'=>'evenements']);

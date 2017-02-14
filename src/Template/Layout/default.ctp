@@ -54,9 +54,11 @@ $user = $this->Session->read('Auth.User');
                             ?>
                             <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
                             <li><?= $this->Html->Link('Conférences',['controller'=>'evenements','action'=>'index']); ?></li>
+                            <li><?= $this->Html->Link('Mes conférences',['controller'=>'Evenements','action'=>'mesevenements']); ?></li>
                             <li><?= $this->Html->Link('Reservations',['controller'=>'reservations','action'=>'index']); ?></li>
                             <li><?= $this->Html->Link('Mon profil',['controller'=>'users','action'=>'view',$user['id']]); ?></li>
                             <li><?= $this->Html->Link('Utilisateurs',['controller'=>'users','action'=>'index']); ?></li>
+
                 <?php
                             break;
                         case 'visiteur':
@@ -71,6 +73,7 @@ $user = $this->Session->read('Auth.User');
                             ?>
                             <li><?= $this->Html->Link('Accueil',['controller'=>'pages','action'=>'home']); ?></li>
                             <li><?= $this->Html->Link('Conférences',['controller'=>'evenements','action'=>'index']); ?></li>
+                            <li><?= $this->Html->Link('Mes conférences',['controller'=>'Evenements','action'=>'mesevenements']); ?></li>
                             <li><?= $this->Html->Link('Reservations',['controller'=>'reservations','action'=>'index']); ?></li>
                             <li><?= $this->Html->Link('Mon profil',['controller'=>'users','action'=>'view',$user['id']]); ?></li>
                             <li><?= $this->Html->Link('Contact',['controller'=>'pages','action'=>'contact']); ?></li>

@@ -1,5 +1,5 @@
 <br><br>
-<nav class="col-md-1 sidebar" id="actions-sidebar">
+<!--<nav class="col-md-1 sidebar" id="actions-sidebar">
     <ul class="nav nav-sidebar">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Evenements'), ['action' => 'index']) ?></li>
@@ -11,7 +11,7 @@
         <li><?= $this->Html->link(__('List Reservation'), ['controller' => 'Reservations', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Reservation'), ['controller' => 'Reservations', 'action' => 'add']) ?></li>
     </ul>
-</nav>
+</nav>-->
 <div class="col-md-6 col-md-offset-2">
     <?= $this->Form->create($evenement) ?>
     <fieldset>
@@ -52,14 +52,14 @@
         echo "</div>";
         echo "<div class=\"col-xs-5\">";
             echo $this->Form->input('date_fin');
-        echo "</div>";
-        echo "<div class=\"col-xs-3\">";
-        echo $this->Form->input('evenement_active', ['type'=>'checkbox']);
-        echo "</div>";
-        echo "<div class=\"col-xs-3\">";
+        echo "</div>";/*
+        echo "<div class=\"col-xs-3\">";*/
+        echo $this->Form->input(' ', ['type'=>'checkbox']);/*
+        echo "</div>";*/
+        echo "<div class=\"col-xs-5\">";
             echo $this->Form->input('nombre_page_accepte');
         echo "</div>";
-        echo "<div class=\"col-xs-3\">";
+        echo "<div class=\"col-xs-5\">";
             echo $this->Form->input('prix_unitaire_extra_page');
         echo "</div>";
         echo "<div class=\"col-xs-5\">";

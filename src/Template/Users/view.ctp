@@ -1,4 +1,5 @@
 <br><br>
+<!--
 <div class="col-md-2 sidebar">
     <ul class="nav nav-sidebar">
         <li><?= $this->Html->link(__('Modifier l\'utilisateur '), ['action' => 'edit', $user->id]) ?> </li>
@@ -13,6 +14,7 @@
     </div>
 
 </div>
+-->
 <!-------->
 <div class="container">
     <div class="row">
@@ -66,7 +68,7 @@
                     </div>
                 </div>
                 <div class="panel-footer">
-                    <?= $this->Html->link(__(""), ['action' => 'edit', $user->id],['class'=>'btn btn-sm btn-warning glyphicon glyphicon-edit']) ?>
+                    <?= $this->Html->link(__("Modifier"), ['action' => 'edit', $user->id],['class'=>'btn btn-sm btn-warning']) ?>
                 </div>
 
             </div>

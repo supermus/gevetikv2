@@ -71,8 +71,16 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
-    public function contact(){
-        
+    public function contact()
+    {
+        if($this->request->is('post'))
+        {
+            $mesg = new Object();
+            debug($mesg);
+            die;
+            //$this->getMailer('User')->send('welcome',[$user]);
+        }
+
     }
 
     

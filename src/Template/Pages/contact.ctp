@@ -12,7 +12,7 @@
     <div class="row">
         <div class="col-md-8">
             <div class="well well-sm">
-                <form>
+                <?= $this->Form->create() ?>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -47,12 +47,13 @@
                                       placeholder="Message"></textarea>
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
-                                Envoyez message</button>
+                        <?php  echo $this->Form->button('Envoyer', array(
+                            'type' => 'submit',
+                            'escape' => false,
+                            'class'=>'btn btn-primary pull-right'
+                        ));?>
+                        <?= $this->Form->end() ?>
                         </div>
-                    </div>
-                </form>
             </div>
         </div>
         <div class="col-md-4">

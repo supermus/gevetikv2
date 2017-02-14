@@ -1,17 +1,10 @@
 <div class="col-md-1 sidebar">
     <ul class="nav nav-sidebar">
-
                 <li><?= $this->Html->link(__('Ajouter un evenement '), ['action' => 'add']) ?> </li>
-
             </ul>
         </div>
-<?php
-//debug($evenements);
-//die();
-?>
 
 <div class="col-md-6 col-md-offset-1">
-    <br>
     <?php foreach ($evenements as $evenement): ?>
     <div class="panel panel-default">
         <div class="panel-heading">

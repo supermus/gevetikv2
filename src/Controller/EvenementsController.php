@@ -77,7 +77,7 @@ class EvenementsController extends AppController
             $reservationExist1 = $reservationTable->find()->where(['evenement_id' => $id])
                 ->andWhere(['participant_id' => $participant->first()->id]);
 
-            if($reservationExist1->count() == 0)
+            if(isset($reservationExist1->count()) == 0)
             {
                 $this->set('reservationExist1',false);
             }
@@ -130,6 +130,8 @@ class EvenementsController extends AppController
         $evenement = $this->Evenements->newEntity();
 
         if ($this->request->is('post')) {
+            if($this->request->data['url_evenement']==""){$this->request->data['url_evenement']="event.jpg";}
+
             $evenement = $this->Evenements->patchEntity($evenement, $this->request->data);
             if ($this->Evenements->save($evenement)) {
 
@@ -216,16 +218,20 @@ public function mesevenements()
         $evenementT = TableRegistry::get('Evenements');
         $leUser = $userT->find()->where(['id' => $this->request->session()->read('Auth.User.id')]);
         $participant = $participantT->find()->where(['email_participant' => $leUser->first()->email]);
-        $organisateur = $organisateurT->find()->where(['participant_id' => $participant->first()->id ]);
 
-
-        $event = array();
-        foreach ($organisateur as $row)
-        {
-            $event[] = $evenementT->find()->where(['id' => $row->evenement_id ]);
-
+        if(isset($participant->first()->id) != null) {
+            $organisateur = $organisateurT->find()->where(['participant_id' => $participant->first()->id]);
+            $event = array();
+            foreach ($organisateur as $row) {
+                $event[] = $evenementT->find()->where(['id' => $row->evenement_id]);
+            }
+            $this->set('mesevents', $event);
         }
-        $this->set('mesevents', $event);
+        else
+        {
+            $this->Flash->error('Vous n\'avez pas d\'evenement');
+            return $this->redirect(['action' => 'index']);
+        }
         //$evenements = $this->paginate($this->Evenements);
 
 

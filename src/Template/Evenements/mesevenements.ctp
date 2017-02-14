@@ -3,7 +3,6 @@
     </ul>
 </div>
 <div class="col-md-6 col-md-offset-1">
-    <br>
     <?php
     for($i=0 ; $i < count($mesevents) ;$i++)
     {

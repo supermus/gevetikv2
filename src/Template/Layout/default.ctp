@@ -14,7 +14,7 @@
  */
 
 $cakeDescription = 'Gevetik';
-$user = $this->Session->read('Auth.User');
+$user = $this->request->session()->read('Auth.User');
 ?>
 <!DOCTYPE html>
 <html>
@@ -98,7 +98,7 @@ $user = $this->Session->read('Auth.User');
             </ul>
         </div>
     </div>
-    </nav>
+    </nav><br><br><br>
     <div class="container" style="width:100%;">
         
     <?php echo $this->Flash->render() ?>

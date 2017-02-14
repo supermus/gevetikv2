@@ -1,9 +1,9 @@
-<div class="overlay">
+<div>
 <div class="col-md-6 col-md-offset-3">
     <style>.hh1 {
-        color:aliceblue;
+        color:#b92c28;
         }</style>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
             <h1 class="hh1">Participer aux différentes conférences !</h1>
             <h3>S'inscrire maintenant :</h3>
         <?php echo $this->Html->link(

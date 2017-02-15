@@ -48,7 +48,23 @@
             ?>
 
             <?php endif; ?>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="BCUR4HBLAHK9Q">
+                <table>
+                    <tr><td><input type="hidden" name="on0" value="Vous etes">Vous etes</td></tr><tr><td><select name="os0">
+                                <option value="Etudiant">Etudiant €350.00 EUR</option>
+                                <option value="Memebre EEE">Memebre EEE €500.00 EUR</option>
+                                <option value="Memebre AMC">Memebre AMC €550.00 EUR</option>
+                                <option value="Normal">Normal €600.00 EUR</option>
+                            </select> </td></tr>
+                </table>
+                <input type="hidden" name="currency_code" value="EUR">
+                <input type="image" src="https://www.paypalobjects.com/fr_XC/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
+                <img alt="" border="0" src="https://www.paypalobjects.com/fr_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
         </div>
+
     </div>
 </div>
     </div>

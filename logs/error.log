@@ -32871,3 +32871,129 @@ Stack Trace:
 #16 {main}
 
 
+2017-02-15 01:13:17 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Debugger.php line=754 in [C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /gevetikv2/gevetikv2/reservations/add-reservation-and-participant/20
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/evenements/view/20
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 118
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2017-02-15 01:13:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Debugger.php:754) in [C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 146]
+Request URL: /gevetikv2/gevetikv2/reservations/add-reservation-and-participant/20
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/evenements/view/20
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 146
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 118
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2017-02-15 01:13:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Debugger.php:754) in [C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 173]
+Request URL: /gevetikv2/gevetikv2/reservations/add-reservation-and-participant/20
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/evenements/view/20
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 173
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 118
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2017-02-15 01:13:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Debugger.php:754) in [C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 173]
+Request URL: /gevetikv2/gevetikv2/reservations/add-reservation-and-participant/20
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/evenements/view/20
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 173
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 118
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2017-02-15 01:13:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Debugger.php:754) in [C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 173]
+Request URL: /gevetikv2/gevetikv2/reservations/add-reservation-and-participant/20
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/evenements/view/20
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 173
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 118
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2017-02-15 01:13:51 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Debugger.php line=754 in [C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /gevetikv2/gevetikv2/reservations/add-reservation-and-participant/20
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/evenements/view/20
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 118
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2017-02-15 01:13:51 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Debugger.php:754) in [C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 146]
+Request URL: /gevetikv2/gevetikv2/reservations/add-reservation-and-participant/20
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/evenements/view/20
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 146
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 118
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2017-02-15 01:13:51 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Debugger.php:754) in [C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 173]
+Request URL: /gevetikv2/gevetikv2/reservations/add-reservation-and-participant/20
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/evenements/view/20
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 173
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 118
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2017-02-15 01:13:51 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Debugger.php:754) in [C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 173]
+Request URL: /gevetikv2/gevetikv2/reservations/add-reservation-and-participant/20
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/evenements/view/20
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 173
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 118
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2017-02-15 01:13:51 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Error\Debugger.php:754) in [C:\wamp64\www\gevetikv2\gevetikv2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 173]
+Request URL: /gevetikv2/gevetikv2/reservations/add-reservation-and-participant/20
+Referer URL: http://localhost:8080/gevetikv2/gevetikv2/evenements/view/20
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 173
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 118
+[main] - ROOT\webroot\index.php, line 37
+
+
+
